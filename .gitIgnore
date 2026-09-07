@@ -1,0 +1,7 @@
+# Create a .gitignore file (important!)
+echo "venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+.ipynb_checkpoints/" > .gitignore
