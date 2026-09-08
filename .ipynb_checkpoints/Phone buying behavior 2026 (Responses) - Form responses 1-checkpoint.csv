@@ -1,0 +1,551 @@
+Timestamp,Birth Year,Gender,Current Brand,Ownership Duration,Top Priorities,Information Source,Purchase Preference,Previous Brand,Loyalty (1-5),Other Devices?,AI Features (1-5),Foldable Interest,Max Budget,After-Sales (1-5)
+01/01/2026 08:15:22,2004,Female,Redmi,2 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Vivo,2,No,4,Maybe,around 15 lakhs,4
+01/01/2026 09:32:45,2003,Female,Samsung,3 months,Camera,Friend/Family,One-time full payment,Samsung,4,No,5,Yes,above 20 lakhs,5
+01/01/2026 10:47:12,2005,Female,Redmi,3 months,"Battery, Gaming, Affordability",Friend/Family,One-time full payment,Samsung,5,No,3,No,around 10 lakhs,3
+01/01/2026 11:23:54,2005,Female,Samsung,4 years,"Camera, Battery, Affordability",Social Media Ads,One-time full payment,Redmi,4,Yes,4,Maybe,around 10 lakhs,5
+01/01/2026 12:08:33,2004,Female,Samsung,2 years,"Camera, Battery, Affordability",In-store demos,One-time full payment,Xiaomi,4,No,3,Yes,around 15 lakhs,4
+01/01/2026 13:44:21,2004,Male,Redmi,5 years,"Battery, Affordability, SOC",Tech Youtuber,One-time full payment,Samsung,5,No,5,No,around 15 lakhs,5
+01/01/2026 14:57:18,2004,Male,Apple,3 years,"Camera, Brand Image, Affordability",Own research,One-time full payment,Xiaomi,4,Yes,4,Maybe,around 20 lakhs,5
+01/01/2026 15:37:19,2007,Male,Techno,2 years,Battery,Friend/Family,One-time full payment,Oppo,3,No,5,Maybe,around 20 lakhs,5
+01/01/2026 16:52:44,2004,Female,Redmi,5 months,"Camera, Battery, Gaming",Tiktok Comparisons,Monthly installments,Redmi,3,No,3,Maybe,around 6 lakhs,5
+01/01/2026 17:18:27,2005,Female,Samsung,4 months,"Camera, Battery",In-store demos,One-time full payment,Apple,5,No,5,Maybe,above 20 lakhs,5
+02/01/2026 08:01:15,2004,Female,Apple,1 year,Camera,Tiktok Comparisons,One-time full payment,Redmi,5,Yes,4,No,above 20 lakhs,5
+02/01/2026 09:23:48,2004,Female,Redmi,4 years,"Camera, Battery, Gaming",Tech Youtuber,One-time full payment,Xiaomi,4,No,3,Maybe,around 15 lakhs,4
+02/01/2026 10:45:33,2007,Male,Redmi,3 years,Gaming,Tech Youtuber,One-time full payment,Redmi,4,No,1,No,around 10 lakhs,2
+02/01/2026 11:56:22,2006,Female,Apple,3 months,"Camera, Battery",Friend/Family,One-time full payment,Redmi,5,Yes,2,Maybe,above 20 lakhs,5
+02/01/2026 12:34:17,1976,Female,Redmi,2 months,"Camera, Brand Image, Affordability",Friend/Family,One-time full payment,Vivo,4,No,3,Maybe,around 8 lakhs,3
+02/01/2026 13:52:09,2003,Female,Redmi,5 years,Camera,Tech Youtuber,One-time full payment,Redmi,2,No,4,Maybe,around 15 lakhs,5
+02/01/2026 14:17:56,2000,Male,Infinix,1 year,"Camera, Affordability",Tech Youtuber,One-time full payment,Redmi,1,No,1,Maybe,Affordable,1
+02/01/2026 15:39:44,2005,Male,Samsung,3 years,Brand Image,In-store demos,One-time full payment,Huawei,4,No,3,No,around 10 lakhs,4
+02/01/2026 16:08:31,2002,Female,Xiaomi,25 days,"Camera, Battery, Brand, Affordability, CPU",Tech Youtuber,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+02/01/2026 17:27:18,2003,Male,Apple,1 year,Camera,Tiktok Comparisons,One-time full payment,Xiaomi,4,Yes,3,No,above 20 lakhs,5
+03/01/2026 07:45:22,2004,Male,Honor,3 years,"Camera, Battery",Social Media Ads,One-time full payment,Realmi,4,No,4,Yes,around 15 lakhs,3
+03/01/2026 08:56:44,2005,Male,Redmi,1 month,"Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,5,No,4,No,around 10 lakhs,3
+03/01/2026 09:22:17,2004,Male,Apple,4 years,"Gaming, Affordability",Friend/Family,One-time full payment,Vivo,4,No,4,Maybe,around 15 lakhs,5
+03/01/2026 10:48:33,2004,Male,Apple,4 years,SOC,Tech Youtuber,One-time full payment,Samsung,2,Yes,1,No,above 20 lakhs,5
+03/01/2026 11:33:29,2006,Female,Redmi,4 months,"Camera, Battery, Affordability, SOC",Tiktok Comparisons,One-time full payment,Techno,4,No,4,Yes,around 10 lakhs,5
+03/01/2026 12:15:48,2005,Female,Xiaomi,4 months,Camera,Tech Youtuber,One-time full payment,Techno,3,No,3,Maybe,around 10 lakhs,5
+03/01/2026 13:27:16,2004,Female,Redmi,4 years,"Camera, Battery, Gaming",Tech Youtuber,One-time full payment,Redmi,4,No,3,Maybe,around 15 lakhs,4
+03/01/2026 14:52:03,2003,Male,Realmi,3 years,"Camera, Battery, Gaming, Affordability",Tech Youtuber,One-time full payment,Xiaomi,3,No,3,Maybe,around 20 lakhs,4
+03/01/2026 15:18:44,2007,Male,Redmi,1 month,"Battery, Gaming, SOC",Tiktok Comparisons,One-time full payment,Redmi,5,No,2,No,around 20 lakhs,5
+04/01/2026 08:22:37,2004,Female,Redmi,5 years,Brand Image,In-store demos,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+04/01/2026 09:44:15,2004,Male,Redmi,4 months,"Camera, SOC",Tech Youtuber,One-time full payment,Vivo,1,Yes,4,Maybe,around 15 lakhs,4
+04/01/2026 10:12:58,2004,Female,Apple,3 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,Maybe,above 20 lakhs,3
+04/01/2026 11:36:22,2005,Male,Apple,9 months,Camera,Tiktok Comparisons,One-time full payment,Samsung,4,No,4,No,above 20 lakhs,5
+04/01/2026 12:58:19,2006,Male,Apple,1.5 years,"Camera, Battery, Brand Image, Affordability",Tiktok Comparisons,One-time full payment,Vivo,5,No,5,No,above 20 lakhs,5
+04/01/2026 13:27:41,2004,Female,Apple,2 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,4,Yes,around 20 lakhs,5
+04/01/2026 14:55:33,1987,Female,Vivo,2 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,4,No,2,Maybe,around 15 lakhs,5
+04/01/2026 15:33:27,1991,Female,Xiaomi,4 years,"Battery, Affordability",In-store demos,One-time full payment,Apple,3,No,3,No,around 10 lakhs,4
+04/01/2026 16:44:18,1972,Female,Infinix,3 years,Affordability,In-store demos,Second-hand,Redmi,3,No,3,Yes,around 8 lakhs,3
+04/01/2026 17:11:24,1981,Male,Xiaomi,5 years,"Battery, Affordability",Friend/Family,One-time full payment,Vivo,4,No,4,No,around 8 lakhs,4
+05/01/2026 07:28:15,2000,Female,Xiaomi,4 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Samsung,3,No,1,Maybe,around 6 lakhs,1
+05/01/2026 08:45:33,2004,Female,Apple,2 years,"Camera, Battery",Tiktok Comparisons,One-time full payment,Redmi,4,No,4,No,above 20 lakhs,4
+05/01/2026 09:22:48,2004,Female,Samsung,3 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+05/01/2026 10:34:27,2003,Female,Honor,1 year,"Camera, Battery, Brand Image, Affordability",Tech Youtuber,One-time full payment,Redmi,3,Yes,4,Yes,around 20 lakhs,5
+05/01/2026 11:17:52,2003,Female,Infinix,2.5 years,Affordability,Friend/Family,One-time full payment,Redmi,1,No,3,No,around 10 lakhs,4
+05/01/2026 12:44:19,2003,Female,Infinix,1 year,"Camera, Battery",In-store demos,One-time full payment,Redmi,2,No,4,No,around 20 lakhs,4
+05/01/2026 13:56:38,2003,Female,Samsung,3 years,"Camera, Battery",Friend/Family,One-time full payment,Samsung,4,No,4,No,around 15 lakhs,5
+05/01/2026 14:33:21,2004,Male,Oppo,2 months,"Camera, Battery, SOC",Tech Youtuber,Second-hand,Samsung,2,Yes,3,No,above 20 lakhs,3
+05/01/2026 15:48:14,2003,Female,Oppo,1 month,"Camera, Battery",In-store demos,One-time full payment,Redmi,4,Yes,4,No,around 20 lakhs,4
+06/01/2026 08:12:37,2003,Male,Redmi,1 year,"Battery, Gaming, Affordability, SOC",Friend/Family,One-time full payment,Samsung,5,No,1,No,around 10 lakhs,4
+06/01/2026 09:27:48,2004,Female,Apple,3 years,"Camera, Brand Image, Affordability",Friend/Family,One-time full payment,Samsung,5,Yes,4,No,above 20 lakhs,3
+06/01/2026 10:44:22,2004,Female,Apple,3 years,"Camera, Brand Image, SOC",Social Media Ads,One-time full payment,Apple,5,Yes,2,No,above 20 lakhs,3
+06/01/2026 11:33:56,2004,Female,Samsung,7 years,"Gaming, Affordability",Friend/Family,One-time full payment,Samsung,3,No,3,No,around 15 lakhs,5
+06/01/2026 12:28:44,2005,Female,Samsung,5 years,"Battery, Brand Image, Affordability",Social Media Ads,One-time full payment,Xiaomi,2,No,4,Maybe,around 20 lakhs,5
+06/01/2026 13:56:17,2003,Female,Samsung,4 years,Camera,Tiktok Comparisons,One-time full payment,Samsung,4,Yes,4,Yes,around 15 lakhs,5
+06/01/2026 14:22:39,2005,Female,Redmi,3 months,"Camera, Battery, Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,4,No,3,No,around 10 lakhs,3
+06/01/2026 15:44:28,2005,Female,Apple,3 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Apple,4,Yes,3,No,above 20 lakhs,3
+07/01/2026 07:22:14,2002,Female,Apple,2 years,"Battery, Brand Image",In-store demos,One-time full payment,Huawei,3,No,3,Yes,above 20 lakhs,5
+07/01/2026 08:33:47,2007,Female,Xiaomi,3 months,Camera,Social Media Ads,Monthly installments,Samsung,4,Yes,3,No,around 15 lakhs,3
+07/01/2026 09:48:22,2002,Female,Apple,2 years,"Battery, Brand Image",In-store demos,One-time full payment,Huawei,3,No,3,Yes,above 20 lakhs,5
+07/01/2026 10:27:36,2004,Female,Vivo,4 years,"Camera, Gaming",In-store demos,One-time full payment,Redmi,1,No,5,No,above 20 lakhs,2
+07/01/2026 11:44:18,2004,Female,Redmi,9 months,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Redmi,2,No,1,No,around 8 lakhs,5
+07/01/2026 12:33:29,2004,Female,Apple,1 year,Camera,Friend/Family,One-time full payment,Apple,1,Yes,1,Maybe,above 20 lakhs,1
+07/01/2026 13:56:44,2002,Female,Apple,2 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Apple,5,Yes,4,No,above 20 lakhs,5
+07/01/2026 14:18:37,2004,Female,Redmi,2 years,Camera,Friend/Family,One-time full payment,Redmi,3,No,2,No,around 8 lakhs,3
+08/01/2026 07:45:22,2006,Female,Huawei,6 years,"Camera, Gaming",Own research,One-time full payment,Huawei,5,No,3,No,around 10 lakhs,5
+08/01/2026 08:22:49,2005,Female,Techno,2 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,2,No,4,Yes,around 10 lakhs,5
+08/01/2026 09:33:18,2005,Female,Apple,7 months,"Camera, Battery, SOC",Friend/Family,Second-hand,Oppo,4,No,4,No,around 20 lakhs,5
+08/01/2026 10:44:56,2004,Female,Redmi,2 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,3,No,3,Maybe,around 15 lakhs,4
+08/01/2026 11:22:37,2003,Female,Samsung,2 years,"Camera, Battery, Affordability",Tech Youtuber,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+08/01/2026 12:56:11,2005,Male,Redmi,2 years,"Gaming, Battery",Friend/Family,One-time full payment,Redmi,4,No,2,No,around 10 lakhs,3
+08/01/2026 13:33:44,2004,Female,Apple,2 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,Maybe,above 20 lakhs,3
+08/01/2026 14:27:18,2006,Female,Samsung,3 years,"Camera, Battery",In-store demos,One-time full payment,Xiaomi,4,No,4,No,around 15 lakhs,5
+09/01/2026 07:22:36,2003,Male,Apple,2 years,"Camera, SOC",Tech Youtuber,One-time full payment,Vivo,4,No,3,No,above 20 lakhs,5
+09/01/2026 08:44:19,2004,Female,Redmi,1 year,"Camera, Affordability",Social Media Ads,One-time full payment,Redmi,3,No,3,Maybe,around 8 lakhs,3
+09/01/2026 09:33:27,2005,Female,Apple,1 year,"Camera, Battery",Friend/Family,One-time full payment,Redmi,5,Yes,4,No,above 20 lakhs,5
+09/01/2026 10:18:42,2004,Male,Samsung,3 years,"Battery, Gaming",Tech Youtuber,One-time full payment,Huawei,3,No,3,No,around 15 lakhs,4
+09/01/2026 11:44:28,2003,Female,Xiaomi,2 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Samsung,3,No,4,Maybe,around 10 lakhs,5
+09/01/2026 12:33:55,2006,Female,Redmi,3 months,"Camera, Gaming",Tiktok Comparisons,One-time full payment,Techno,4,No,4,Yes,around 10 lakhs,5
+09/01/2026 13:27:33,2004,Female,Apple,3 years,"Camera, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,3,No,above 20 lakhs,3
+09/01/2026 14:56:11,2005,Male,Redmi,1 year,"Battery, SOC",Tech Youtuber,One-time full payment,Redmi,4,No,2,No,around 10 lakhs,3
+10/01/2026 07:44:18,2004,Female,Samsung,2 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+10/01/2026 08:22:47,2003,Female,Apple,2 years,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Xiaomi,5,Yes,4,Maybe,above 20 lakhs,5
+10/01/2026 09:33:56,2007,Male,Redmi,2 years,"Gaming, Affordability",Friend/Family,One-time full payment,Redmi,4,No,1,No,around 10 lakhs,3
+10/01/2026 10:18:34,2004,Female,Vivo,3 years,"Camera, Battery",In-store demos,One-time full payment,Redmi,2,No,4,No,around 15 lakhs,3
+10/01/2026 11:22:19,2005,Female,Apple,1 year,"Camera, Brand Image",Social Media Ads,One-time full payment,Samsung,4,Yes,3,No,above 20 lakhs,3
+10/01/2026 12:44:56,2004,Male,Xiaomi,2 years,"Battery, Affordability, SOC",Tech Youtuber,One-time full payment,Vivo,3,No,3,Maybe,around 15 lakhs,5
+10/01/2026 13:22:38,2003,Female,Redmi,3 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,3,No,4,No,around 10 lakhs,5
+10/01/2026 14:56:27,2006,Female,Apple,2 years,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Redmi,5,No,5,No,above 20 lakhs,5
+11/01/2026 07:33:15,2004,Female,Samsung,4 years,"Camera, Battery, Affordability",In-store demos,One-time full payment,Xiaomi,4,No,3,Maybe,around 15 lakhs,4
+11/01/2026 08:44:22,2005,Male,Apple,1 year,"Camera, Gaming",Tech Youtuber,One-time full payment,Samsung,4,No,4,No,above 20 lakhs,5
+11/01/2026 09:22:49,2004,Female,Redmi,3 years,"Battery, Affordability",Friend/Family,One-time full payment,Redmi,3,No,2,No,around 8 lakhs,4
+11/01/2026 10:56:33,2003,Female,Samsung,2 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Apple,4,Yes,4,Yes,around 20 lakhs,5
+11/01/2026 11:33:27,2007,Female,Redmi,1 year,"Camera, Gaming",Tech Youtuber,One-time full payment,Redmi,4,No,3,Maybe,around 10 lakhs,3
+11/01/2026 12:18:44,2004,Male,Apple,3 years,"Camera, SOC",Friend/Family,One-time full payment,Vivo,4,Yes,3,No,above 20 lakhs,5
+11/01/2026 13:44:28,2005,Female,Xiaomi,2 years,"Battery, Affordability",In-store demos,One-time full payment,Samsung,3,No,4,No,around 10 lakhs,3
+11/01/2026 14:22:17,2004,Female,Apple,2 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Redmi,5,Yes,4,Maybe,above 20 lakhs,3
+12/01/2026 07:33:55,2003,Male,Redmi,3 years,"Gaming, Battery",Tech Youtuber,One-time full payment,Xiaomi,4,No,2,No,around 15 lakhs,3
+12/01/2026 08:56:18,2006,Female,Samsung,2 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+12/01/2026 09:33:44,2004,Female,Apple,1 year,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,No,above 20 lakhs,3
+12/01/2026 10:22:37,2005,Male,Redmi,2 years,"Battery, Gaming, Affordability",Friend/Family,One-time full payment,Redmi,5,No,2,No,around 10 lakhs,3
+13/01/2026 07:22:18,2004,Female,Redmi,3 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,3,No,4,Maybe,around 15 lakhs,4
+13/01/2026 08:44:33,2003,Female,Samsung,6 months,"Camera, Brand Image",Tech Youtuber,One-time full payment,Samsung,5,Yes,5,Yes,above 20 lakhs,5
+13/01/2026 09:33:27,2005,Female,Redmi,2 months,"Battery, Gaming",Friend/Family,One-time full payment,Samsung,4,No,3,No,around 10 lakhs,3
+13/01/2026 10:56:41,2006,Female,Apple,3 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Redmi,5,Yes,4,Maybe,above 20 lakhs,4
+13/01/2026 11:22:15,2004,Male,Samsung,1 year,"Camera, Battery, SOC",Tech Youtuber,One-time full payment,Xiaomi,3,No,3,No,around 15 lakhs,4
+13/01/2026 12:44:38,2004,Female,Apple,4 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,4,Yes,4,No,above 20 lakhs,3
+13/01/2026 13:18:52,2007,Male,Redmi,1 year,"Gaming, Battery",Friend/Family,One-time full payment,Oppo,4,No,2,Maybe,around 10 lakhs,3
+13/01/2026 14:33:27,2005,Female,Samsung,5 years,"Camera, Battery, Affordability",In-store demos,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+13/01/2026 15:56:44,2004,Female,Redmi,8 months,"Camera, Gaming",Tiktok Comparisons,Monthly installments,Redmi,2,No,3,Maybe,around 6 lakhs,4
+13/01/2026 16:22:19,2003,Female,Apple,2 years,"Camera, Battery",Friend/Family,One-time full payment,Xiaomi,5,Yes,5,No,above 20 lakhs,5
+14/01/2026 07:33:48,2004,Male,Redmi,5 years,"Battery, Affordability",Tech Youtuber,One-time full payment,Samsung,5,No,4,No,around 15 lakhs,5
+14/01/2026 08:22:36,2002,Female,Xiaomi,3 years,"Camera, Battery, Affordability",Own research,One-time full payment,Redmi,3,No,3,Maybe,around 10 lakhs,4
+14/01/2026 09:44:21,2006,Female,Apple,1 year,"Camera, Brand Image",Social Media Ads,One-time full payment,Samsung,4,Yes,3,Maybe,above 20 lakhs,3
+14/01/2026 10:18:55,2005,Male,Samsung,2 years,"Gaming, SOC",Tech Youtuber,One-time full payment,Huawei,4,No,4,No,around 20 lakhs,4
+14/01/2026 11:56:33,2004,Female,Redmi,4 years,"Camera, Battery, Gaming",Friend/Family,One-time full payment,Xiaomi,3,No,3,Yes,around 15 lakhs,4
+14/01/2026 12:33:22,2007,Male,Redmi,2 years,"Battery, Gaming",Tiktok Comparisons,One-time full payment,Redmi,4,No,1,No,around 10 lakhs,2
+14/01/2026 13:44:17,2003,Female,Samsung,4 years,"Camera, Battery",In-store demos,One-time full payment,Apple,4,Yes,4,No,around 20 lakhs,5
+14/01/2026 14:22:48,2004,Male,Apple,3 years,"Camera, SOC",Friend/Family,One-time full payment,Vivo,4,No,3,Maybe,above 20 lakhs,5
+14/01/2026 15:56:29,2005,Female,Redmi,6 months,"Camera, Affordability",Tech Youtuber,One-time full payment,Redmi,3,No,4,No,around 8 lakhs,3
+14/01/2026 16:33:14,2000,Male,Infinix,2 years,"Affordability, Battery",Friend/Family,One-time full payment,Redmi,1,No,2,No,around 6 lakhs,2
+15/01/2026 07:44:36,2004,Female,Apple,2 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,4,Yes,above 20 lakhs,3
+15/01/2026 08:22:19,2005,Male,Redmi,1 month,"Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,5,No,3,No,around 10 lakhs,3
+15/01/2026 09:56:44,2004,Female,Samsung,3 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+15/01/2026 10:33:28,2003,Male,Apple,2 years,"Camera, Gaming",Tech Youtuber,One-time full payment,Xiaomi,3,Yes,4,Maybe,above 20 lakhs,4
+15/01/2026 11:18:52,2006,Female,Xiaomi,3 months,"Camera, Battery",Social Media Ads,One-time full payment,Techno,3,No,3,No,around 10 lakhs,4
+15/01/2026 12:44:37,2004,Female,Redmi,5 years,"Brand Image, Affordability",In-store demos,One-time full payment,Redmi,4,No,4,Maybe,around 15 lakhs,5
+15/01/2026 13:22:45,2005,Female,Apple,9 months,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,5,No,above 20 lakhs,4
+15/01/2026 14:56:18,2004,Male,Redmi,4 months,"Camera, SOC",Tech Youtuber,One-time full payment,Vivo,2,No,4,Maybe,around 15 lakhs,4
+15/01/2026 15:33:29,2007,Female,Samsung,1 year,"Camera, Battery",Friend/Family,One-time full payment,Oppo,4,No,3,No,around 10 lakhs,3
+16/01/2026 07:22:47,2004,Female,Apple,3 years,"Camera, Brand Image",Social Media Ads,One-time full payment,Redmi,5,Yes,4,No,above 20 lakhs,3
+16/01/2026 08:44:33,2003,Female,Redmi,2 years,"Battery, Gaming, Affordability",Friend/Family,One-time full payment,Samsung,3,No,3,Maybe,around 10 lakhs,4
+16/01/2026 09:33:22,2005,Male,Apple,1.5 years,"Camera, Brand Image",Tech Youtuber,One-time full payment,Vivo,4,No,5,No,above 20 lakhs,5
+16/01/2026 10:56:41,2004,Female,Samsung,2 years,"Camera, Battery, Affordability",In-store demos,One-time full payment,Xiaomi,4,No,3,Yes,around 15 lakhs,4
+16/01/2026 11:22:18,2006,Female,Redmi,5 months,"Camera, Gaming, SOC",Tiktok Comparisons,One-time full payment,Techno,4,No,4,Yes,around 10 lakhs,5
+16/01/2026 12:44:29,2002,Female,Apple,4 years,"Battery, Brand Image",Own research,One-time full payment,Huawei,3,Yes,3,No,above 20 lakhs,5
+16/01/2026 13:18:54,2004,Male,Redmi,3 years,"Battery, Affordability",Friend/Family,One-time full payment,Redmi,4,No,2,No,around 8 lakhs,3
+16/01/2026 14:33:36,2005,Female,Samsung,3 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Apple,4,Yes,4,Maybe,around 20 lakhs,5
+16/01/2026 15:56:22,2003,Female,Redmi,1 year,"Camera, Affordability",Tech Youtuber,One-time full payment,Redmi,2,No,3,No,around 10 lakhs,4
+17/01/2026 07:33:49,2004,Female,Apple,2 years,"Camera, Battery",Friend/Family,One-time full payment,Samsung,5,Yes,5,No,above 20 lakhs,5
+17/01/2026 08:22:17,2007,Male,Redmi,2 years,"Gaming, Battery",Tiktok Comparisons,One-time full payment,Redmi,4,No,2,No,around 10 lakhs,3
+17/01/2026 09:44:38,2004,Female,Samsung,4 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+17/01/2026 10:33:22,2005,Male,Apple,6 months,"Camera, SOC",Tech Youtuber,One-time full payment,Samsung,3,Yes,4,Maybe,above 20 lakhs,4
+17/01/2026 11:56:47,2004,Female,Redmi,3 years,"Battery, Gaming",In-store demos,One-time full payment,Vivo,3,No,3,No,around 15 lakhs,4
+17/01/2026 12:22:35,2003,Female,Xiaomi,2 years,"Camera, Battery, Affordability",Tech Youtuber,One-time full payment,Redmi,3,No,4,Maybe,around 10 lakhs,5
+17/01/2026 13:44:28,2006,Female,Apple,1 year,"Camera, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,4,No,above 20 lakhs,3
+17/01/2026 14:22:51,2004,Male,Redmi,4 years,"Battery, Affordability, SOC",Friend/Family,One-time full payment,Xiaomi,4,No,3,Maybe,around 15 lakhs,4
+17/01/2026 15:56:33,2005,Female,Samsung,5 years,"Camera, Battery",Tiktok Comparisons,One-time full payment,Redmi,4,Yes,4,No,around 20 lakhs,5
+18/01/2026 07:22:44,2004,Female,Apple,3 years,"Camera, Brand Image, Affordability",Friend/Family,One-time full payment,Samsung,5,Yes,5,Yes,above 20 lakhs,4
+18/01/2026 08:44:19,2005,Male,Redmi,2 months,"Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,4,No,3,No,around 10 lakhs,3
+18/01/2026 09:33:55,2004,Female,Samsung,2 years,"Camera, Battery",In-store demos,One-time full payment,Xiaomi,3,No,4,No,around 15 lakhs,5
+18/01/2026 10:56:22,2003,Female,Apple,4 years,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Apple,5,Yes,4,Maybe,above 20 lakhs,3
+18/01/2026 11:22:49,2006,Female,Redmi,3 months,"Camera, Gaming",Friend/Family,One-time full payment,Techno,4,No,3,Yes,around 10 lakhs,5
+18/01/2026 12:44:33,2004,Male,Samsung,1 year,"Camera, Battery, SOC",Tech Youtuber,One-time full payment,Vivo,3,No,4,No,around 20 lakhs,4
+18/01/2026 13:18:27,2005,Female,Redmi,5 years,"Battery, Affordability",Friend/Family,One-time full payment,Redmi,4,No,2,No,around 8 lakhs,3
+18/01/2026 14:33:42,2007,Male,Apple,2 years,"Camera, Gaming",Social Media Ads,One-time full payment,Samsung,4,Yes,4,No,above 20 lakhs,5
+18/01/2026 15:56:18,2004,Female,Xiaomi,3 years,"Camera, Battery, Affordability",Tech Youtuber,One-time full payment,Redmi,3,No,3,Maybe,around 10 lakhs,4
+19/01/2026 07:33:55,2004,Female,Apple,2 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,5,No,above 20 lakhs,3
+19/01/2026 08:22:38,2003,Male,Redmi,4 years,"Battery, Gaming",Friend/Family,One-time full payment,Xiaomi,4,No,2,No,around 15 lakhs,4
+19/01/2026 09:44:22,2005,Female,Samsung,3 years,"Camera, Battery",In-store demos,One-time full payment,Redmi,4,No,4,Yes,around 20 lakhs,5
+19/01/2026 10:33:17,2006,Female,Apple,1.5 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,5,No,above 20 lakhs,4
+19/01/2026 11:56:44,2004,Female,Redmi,2 years,"Camera, Gaming",Tech Youtuber,One-time full payment,Vivo,3,No,4,Maybe,around 15 lakhs,5
+19/01/2026 12:22:28,2005,Male,Samsung,3 years,"Battery, Affordability",Friend/Family,One-time full payment,Huawei,3,No,3,No,around 10 lakhs,4
+19/01/2026 13:44:51,2003,Female,Apple,5 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Xiaomi,4,Yes,4,No,above 20 lakhs,5
+19/01/2026 14:22:37,2004,Male,Redmi,1 year,"Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,5,No,3,No,around 10 lakhs,3
+19/01/2026 15:56:29,2006,Female,Samsung,2 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,Maybe,around 15 lakhs,5
+20/01/2026 07:22:48,2004,Female,Apple,3 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,5,Yes,above 20 lakhs,4
+20/01/2026 08:44:33,2005,Male,Redmi,6 months,"Gaming, Battery",Tech Youtuber,One-time full payment,Redmi,4,No,3,No,around 10 lakhs,3
+20/01/2026 09:33:26,2003,Female,Xiaomi,4 years,"Camera, Affordability",In-store demos,One-time full payment,Samsung,3,No,4,Maybe,around 10 lakhs,5
+20/01/2026 10:56:44,2004,Female,Apple,2 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Redmi,5,Yes,4,No,above 20 lakhs,3
+20/01/2026 11:22:19,2007,Male,Redmi,1 year,"Battery, Gaming",Friend/Family,One-time full payment,Oppo,4,No,2,No,around 10 lakhs,3
+20/01/2026 12:44:37,2004,Female,Samsung,3 years,"Camera, Battery",Tech Youtuber,One-time full payment,Xiaomi,4,No,4,No,around 20 lakhs,5
+20/01/2026 13:18:22,2005,Female,Apple,8 months,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,5,Maybe,above 20 lakhs,4
+20/01/2026 14:33:48,2004,Male,Redmi,5 years,"Battery, Affordability, SOC",Friend/Family,One-time full payment,Vivo,5,No,3,No,around 15 lakhs,5
+20/01/2026 15:56:22,2006,Female,Samsung,2 years,"Camera, Gaming",Tiktok Comparisons,One-time full payment,Redmi,4,No,4,Yes,around 15 lakhs,4
+21/01/2026 07:33:44,2004,Female,Apple,4 years,"Camera, Brand Image",In-store demos,One-time full payment,Samsung,5,Yes,4,No,above 20 lakhs,3
+21/01/2026 08:22:29,2003,Male,Redmi,3 years,"Battery, Gaming",Tech Youtuber,One-time full payment,Xiaomi,4,No,2,No,around 10 lakhs,4
+21/01/2026 09:44:56,2005,Female,Samsung,1 year,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+21/01/2026 10:33:38,2004,Female,Apple,2 years,"Camera, Brand Image, SOC",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,5,Maybe,above 20 lakhs,4
+21/01/2026 11:56:22,2006,Male,Redmi,4 months,"Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,4,No,3,No,around 10 lakhs,3
+21/01/2026 12:22:47,2004,Female,Xiaomi,3 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Redmi,3,No,4,Maybe,around 10 lakhs,5
+21/01/2026 13:44:22,2005,Female,Apple,2 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,5,No,above 20 lakhs,4
+21/01/2026 14:22:54,2004,Male,Samsung,3 years,"Camera, SOC",Tech Youtuber,One-time full payment,Vivo,3,No,4,No,around 20 lakhs,5
+21/01/2026 15:56:38,2003,Female,Redmi,2 years,"Battery, Affordability",In-store demos,One-time full payment,Redmi,3,No,3,No,around 8 lakhs,3
+22/01/2026 07:22:33,2004,Female,Apple,3 years,"Camera, Brand Image",Friend/Family,One-time full payment,Samsung,5,Yes,4,Yes,above 20 lakhs,5
+22/01/2026 08:44:48,2007,Male,Redmi,2 years,"Gaming, Battery",Tiktok Comparisons,One-time full payment,Redmi,4,No,2,No,around 10 lakhs,3
+22/01/2026 09:33:55,2005,Female,Samsung,4 years,"Camera, Battery",Tech Youtuber,One-time full payment,Xiaomi,4,Yes,4,No,around 20 lakhs,5
+22/01/2026 10:56:33,2004,Female,Apple,1 year,"Camera, Brand Image",Social Media Ads,One-time full payment,Redmi,5,Yes,5,Maybe,above 20 lakhs,4
+22/01/2026 11:22:48,2006,Male,Redmi,5 years,"Battery, Affordability",Friend/Family,One-time full payment,Vivo,4,No,3,No,around 15 lakhs,5
+22/01/2026 12:44:22,2004,Female,Samsung,3 years,"Camera, Battery, Affordability",In-store demos,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+22/01/2026 13:18:37,2003,Male,Apple,2 years,"Camera, SOC",Tech Youtuber,One-time full payment,Xiaomi,4,Yes,4,No,above 20 lakhs,5
+22/01/2026 14:33:44,2005,Female,Redmi,3 months,"Camera, Gaming",Tiktok Comparisons,One-time full payment,Techno,4,No,3,Yes,around 10 lakhs,4
+22/01/2026 15:56:19,2004,Female,Apple,2 years,"Camera, Battery, Brand Image",Friend/Family,One-time full payment,Samsung,5,Yes,5,No,above 20 lakhs,3
+23/01/2026 07:44:55,2006,Female,Samsung,3 years,"Camera, Battery",Social Media Ads,One-time full payment,Redmi,4,No,4,Maybe,around 15 lakhs,5
+23/01/2026 08:22:38,2004,Male,Redmi,1 year,"Gaming, Affordability",Tech Youtuber,One-time full payment,Redmi,4,No,2,No,around 10 lakhs,3
+23/01/2026 09:56:22,2005,Female,Apple,2 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,5,No,above 20 lakhs,4
+23/01/2026 10:33:17,2004,Female,Xiaomi,4 years,"Battery, Affordability",Friend/Family,One-time full payment,Vivo,3,No,4,Maybe,around 10 lakhs,5
+23/01/2026 11:44:33,2003,Male,Samsung,2 years,"Camera, Battery, SOC",Tech Youtuber,One-time full payment,Huawei,4,No,3,No,around 20 lakhs,4
+23/01/2026 12:22:49,2004,Female,Redmi,5 years,"Camera, Battery",In-store demos,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+23/01/2026 13:56:44,2006,Female,Apple,1 year,"Camera, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,5,Yes,above 20 lakhs,4
+23/01/2026 14:33:22,2005,Male,Redmi,3 months,"Gaming, SOC",Friend/Family,One-time full payment,Redmi,5,No,3,No,around 10 lakhs,3
+24/01/2026 07:22:56,2004,Female,Samsung,2 years,"Camera, Battery",Tech Youtuber,One-time full payment,Xiaomi,4,No,4,No,around 15 lakhs,5
+24/01/2026 08:44:22,2003,Female,Apple,3 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Apple,5,Yes,5,Maybe,above 20 lakhs,5
+24/01/2026 09:33:48,2004,Male,Redmi,4 years,"Battery, Gaming, Affordability",Friend/Family,One-time full payment,Vivo,4,No,3,No,around 15 lakhs,4
+24/01/2026 10:56:33,2005,Female,Apple,2 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Redmi,5,Yes,5,No,above 20 lakhs,5
+24/01/2026 11:22:19,2007,Female,Samsung,3 years,"Camera, Battery",In-store demos,One-time full payment,Oppo,4,No,4,No,around 10 lakhs,3
+24/01/2026 12:44:55,2004,Female,Redmi,6 months,"Camera, Gaming",Tiktok Comparisons,Monthly installments,Redmi,3,No,3,Maybe,around 6 lakhs,4
+25/01/2026 07:22:34,2004,Female,Redmi,2 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,2,No,4,Maybe,around 15 lakhs,4
+25/01/2026 08:44:19,2003,Female,Samsung,3 months,Camera,Friend/Family,One-time full payment,Samsung,4,No,5,Yes,above 20 lakhs,5
+25/01/2026 09:33:47,2005,Female,Redmi,3 months,"Battery, Gaming",Friend/Family,One-time full payment,Samsung,5,No,3,No,around 10 lakhs,3
+25/01/2026 10:56:22,2005,Female,Samsung,4 years,"Camera, Battery",Social Media Ads,One-time full payment,Redmi,4,Yes,4,Maybe,around 10 lakhs,5
+25/01/2026 11:22:58,2004,Female,Samsung,2 years,"Camera, Battery",In-store demos,One-time full payment,Xiaomi,4,No,3,Yes,around 15 lakhs,4
+25/01/2026 12:44:33,2004,Male,Redmi,5 years,"Battery, Affordability, SOC",Tech Youtuber,One-time full payment,Samsung,5,No,5,No,around 15 lakhs,5
+25/01/2026 13:18:29,2004,Male,Apple,3 years,"Camera, Brand Image",Own research,One-time full payment,Xiaomi,4,Yes,4,Maybe,around 20 lakhs,5
+25/01/2026 14:33:55,2007,Male,Techno,2 years,Battery,Friend/Family,One-time full payment,Oppo,3,No,5,Maybe,around 20 lakhs,5
+25/01/2026 15:56:44,2004,Female,Redmi,5 months,"Camera, Battery, Gaming",Tiktok Comparisons,Monthly installments,Redmi,3,No,3,Maybe,around 6 lakhs,5
+25/01/2026 16:22:18,2005,Female,Samsung,4 months,"Camera, Battery",In-store demos,One-time full payment,Apple,5,No,5,Maybe,above 20 lakhs,5
+26/01/2026 07:33:22,2004,Female,Apple,1 year,Camera,Tiktok Comparisons,One-time full payment,Redmi,5,Yes,4,No,above 20 lakhs,5
+26/01/2026 08:44:56,2004,Female,Redmi,4 years,"Camera, Battery, Gaming",Tech Youtuber,One-time full payment,Xiaomi,4,No,3,Maybe,around 15 lakhs,4
+26/01/2026 09:22:33,2007,Male,Redmi,3 years,Gaming,Tech Youtuber,One-time full payment,Redmi,4,No,1,No,around 10 lakhs,2
+26/01/2026 10:56:47,2006,Female,Apple,3 months,"Camera, Battery",Friend/Family,One-time full payment,Redmi,5,Yes,2,Maybe,above 20 lakhs,5
+26/01/2026 11:33:28,1976,Female,Redmi,2 months,"Camera, Brand Image",Friend/Family,One-time full payment,Vivo,4,No,3,Maybe,around 8 lakhs,3
+26/01/2026 12:44:19,2003,Female,Redmi,5 years,Camera,Tech Youtuber,One-time full payment,Redmi,2,No,4,Maybe,around 15 lakhs,5
+26/01/2026 13:22:44,2000,Male,Infinix,1 year,"Camera, Affordability",Tech Youtuber,One-time full payment,Redmi,1,No,1,Maybe,Affordable,1
+26/01/2026 14:56:33,2005,Male,Samsung,3 years,Brand Image,In-store demos,One-time full payment,Huawei,4,No,3,No,around 10 lakhs,4
+26/01/2026 15:33:18,2002,Female,Xiaomi,25 days,"Camera, Battery, Brand, Affordability",Tech Youtuber,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+27/01/2026 07:44:22,2003,Male,Apple,1 year,Camera,Tiktok Comparisons,One-time full payment,Xiaomi,4,Yes,3,No,above 20 lakhs,5
+27/01/2026 08:22:56,2004,Male,Honor,3 years,"Camera, Battery",Social Media Ads,One-time full payment,Realmi,4,No,4,Yes,around 15 lakhs,3
+27/01/2026 09:33:19,2005,Male,Redmi,1 month,"Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,5,No,4,No,around 10 lakhs,3
+27/01/2026 10:56:44,2004,Male,Apple,4 years,"Gaming, Affordability",Friend/Family,One-time full payment,Vivo,4,No,4,Maybe,around 15 lakhs,5
+27/01/2026 11:22:37,2004,Male,Apple,4 years,SOC,Tech Youtuber,One-time full payment,Samsung,2,Yes,1,No,above 20 lakhs,5
+27/01/2026 12:44:28,2006,Female,Redmi,4 months,"Camera, Battery, Affordability, SOC",Tiktok Comparisons,One-time full payment,Techno,4,No,4,Yes,around 10 lakhs,5
+27/01/2026 13:33:55,2005,Female,Xiaomi,4 months,Camera,Tech Youtuber,One-time full payment,Techno,3,No,3,Maybe,around 10 lakhs,5
+27/01/2026 14:22:49,2004,Female,Redmi,4 years,"Camera, Battery, Gaming",Tech Youtuber,One-time full payment,Redmi,4,No,3,Maybe,around 15 lakhs,4
+28/01/2026 07:33:44,2003,Male,Realmi,3 years,"Camera, Battery, Gaming, Affordability",Tech Youtuber,One-time full payment,Xiaomi,3,No,3,Maybe,around 20 lakhs,4
+28/01/2026 08:22:18,2007,Male,Redmi,1 month,"Battery, Gaming, SOC",Tiktok Comparisons,One-time full payment,Redmi,5,No,2,No,around 20 lakhs,5
+28/01/2026 09:44:56,2004,Female,Redmi,5 years,Brand Image,In-store demos,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+28/01/2026 10:33:22,2004,Male,Redmi,4 months,"Camera, SOC",Tech Youtuber,One-time full payment,Vivo,1,Yes,4,Maybe,around 15 lakhs,4
+28/01/2026 11:56:47,2004,Female,Apple,3 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,Maybe,above 20 lakhs,3
+28/01/2026 12:22:33,2005,Male,Apple,9 months,Camera,Tiktok Comparisons,One-time full payment,Samsung,4,No,4,No,above 20 lakhs,5
+28/01/2026 13:44:29,2006,Male,Apple,1.5 years,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Vivo,5,No,5,No,above 20 lakhs,5
+28/01/2026 14:33:18,2004,Female,Apple,2 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,4,Yes,around 20 lakhs,5
+29/01/2026 07:22:55,1987,Female,Vivo,2 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,4,No,2,Maybe,around 15 lakhs,5
+29/01/2026 08:44:33,1991,Female,Xiaomi,4 years,"Battery, Affordability",In-store demos,One-time full payment,Apple,3,No,3,No,around 10 lakhs,4
+29/01/2026 09:33:27,1972,Female,Infinix,3 years,Affordability,In-store demos,Second-hand,Redmi,3,No,3,Yes,around 8 lakhs,3
+29/01/2026 10:56:44,1981,Male,Xiaomi,5 years,"Battery, Affordability",Friend/Family,One-time full payment,Vivo,4,No,4,No,around 8 lakhs,4
+29/01/2026 11:22:19,2000,Female,Xiaomi,4 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Samsung,3,No,1,Maybe,around 6 lakhs,1
+29/01/2026 12:44:38,2004,Female,Apple,2 years,"Camera, Battery",Tiktok Comparisons,One-time full payment,Redmi,4,No,4,No,above 20 lakhs,4
+29/01/2026 13:33:22,2004,Female,Samsung,3 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+30/01/2026 07:22:44,2003,Female,Honor,1 year,"Camera, Battery, Brand Image",Tech Youtuber,One-time full payment,Redmi,3,Yes,4,Yes,around 20 lakhs,5
+30/01/2026 08:44:19,2003,Female,Infinix,2.5 years,Affordability,Friend/Family,One-time full payment,Redmi,1,No,3,No,around 10 lakhs,4
+30/01/2026 09:33:56,2003,Female,Infinix,1 year,"Camera, Battery",In-store demos,One-time full payment,Redmi,2,No,4,No,around 20 lakhs,4
+30/01/2026 10:56:33,2003,Female,Samsung,3 years,"Camera, Battery",Friend/Family,One-time full payment,Samsung,4,No,4,No,around 15 lakhs,5
+30/01/2026 11:22:47,2004,Male,Oppo,2 months,"Camera, Battery, SOC",Tech Youtuber,Second-hand,Samsung,2,Yes,3,No,above 20 lakhs,3
+30/01/2026 12:44:22,2003,Female,Oppo,1 month,"Camera, Battery",In-store demos,One-time full payment,Redmi,4,Yes,4,No,around 20 lakhs,4
+30/01/2026 13:33:48,2003,Male,Redmi,1 year,"Battery, Gaming, Affordability, SOC",Friend/Family,One-time full payment,Samsung,5,No,1,No,around 10 lakhs,4
+31/01/2026 07:44:22,2004,Female,Apple,3 years,"Camera, Brand Image",Friend/Family,One-time full payment,Samsung,5,Yes,4,No,above 20 lakhs,3
+31/01/2026 08:22:56,2004,Female,Apple,3 years,"Camera, Brand Image, SOC",Social Media Ads,One-time full payment,Apple,5,Yes,2,No,above 20 lakhs,3
+31/01/2026 09:33:19,2004,Female,Samsung,7 years,"Gaming, Affordability",Friend/Family,One-time full payment,Samsung,3,No,3,No,around 15 lakhs,5
+31/01/2026 10:56:44,2005,Female,Samsung,5 years,"Battery, Brand Image",Social Media Ads,One-time full payment,Xiaomi,2,No,4,Maybe,around 20 lakhs,5
+31/01/2026 11:22:38,2003,Female,Samsung,4 years,Camera,Tiktok Comparisons,One-time full payment,Samsung,4,Yes,4,Yes,around 15 lakhs,5
+31/01/2026 12:44:29,2005,Female,Redmi,3 months,"Camera, Battery, Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,4,No,3,No,around 10 lakhs,3
+01/02/2026 07:33:44,2005,Female,Apple,3 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Apple,4,Yes,3,No,above 20 lakhs,3
+01/02/2026 08:22:18,2002,Female,Apple,2 years,"Battery, Brand Image",In-store demos,One-time full payment,Huawei,3,No,3,Yes,above 20 lakhs,5
+01/02/2026 09:44:56,2007,Female,Xiaomi,3 months,Camera,Social Media Ads,Monthly installments,Samsung,4,Yes,3,No,around 15 lakhs,3
+01/02/2026 10:33:22,2002,Female,Apple,2 years,"Battery, Brand Image",In-store demos,One-time full payment,Huawei,3,No,3,Yes,above 20 lakhs,5
+01/02/2026 11:56:47,2004,Female,Vivo,4 years,"Camera, Gaming",In-store demos,One-time full payment,Redmi,1,No,5,No,above 20 lakhs,2
+01/02/2026 12:22:33,2004,Female,Redmi,9 months,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Redmi,2,No,1,No,around 8 lakhs,5
+01/02/2026 13:44:29,2004,Female,Apple,1 year,Camera,Friend/Family,One-time full payment,Apple,1,Yes,1,Maybe,above 20 lakhs,1
+02/02/2026 07:22:55,2002,Female,Apple,2 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Apple,5,Yes,4,No,above 20 lakhs,5
+02/02/2026 08:44:33,2004,Female,Redmi,2 years,Camera,Friend/Family,One-time full payment,Redmi,3,No,2,No,around 8 lakhs,3
+02/02/2026 09:33:27,2006,Female,Huawei,6 years,"Camera, Gaming",Own research,One-time full payment,Huawei,5,No,3,No,around 10 lakhs,5
+02/02/2026 10:56:44,2005,Female,Techno,2 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,2,No,4,Yes,around 10 lakhs,5
+02/02/2026 11:22:19,2005,Female,Apple,7 months,"Camera, Battery, SOC",Friend/Family,Second-hand,Oppo,4,No,4,No,around 20 lakhs,5
+02/02/2026 12:44:38,2004,Female,Redmi,2 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,3,No,3,Maybe,around 15 lakhs,4
+02/02/2026 13:33:22,2003,Female,Samsung,2 years,"Camera, Battery",Tech Youtuber,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+03/02/2026 07:22:44,2005,Male,Redmi,2 years,"Gaming, Battery",Friend/Family,One-time full payment,Redmi,4,No,2,No,around 10 lakhs,3
+03/02/2026 08:44:19,2004,Female,Apple,2 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,Maybe,above 20 lakhs,3
+03/02/2026 09:33:56,2006,Female,Samsung,3 years,"Camera, Battery",In-store demos,One-time full payment,Xiaomi,4,No,4,No,around 15 lakhs,5
+03/02/2026 10:56:33,2003,Male,Apple,2 years,"Camera, SOC",Tech Youtuber,One-time full payment,Vivo,4,No,3,No,above 20 lakhs,5
+03/02/2026 11:22:47,2004,Female,Redmi,1 year,"Camera, Affordability",Social Media Ads,One-time full payment,Redmi,3,No,3,Maybe,around 8 lakhs,3
+03/02/2026 12:44:22,2005,Female,Apple,1 year,"Camera, Battery",Friend/Family,One-time full payment,Redmi,5,Yes,4,No,above 20 lakhs,5
+03/02/2026 13:33:48,2004,Male,Samsung,3 years,"Battery, Gaming",Tech Youtuber,One-time full payment,Huawei,3,No,3,No,around 15 lakhs,4
+04/02/2026 07:44:22,2003,Female,Xiaomi,2 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Samsung,3,No,4,Maybe,around 10 lakhs,5
+04/02/2026 08:22:56,2006,Female,Redmi,3 months,"Camera, Gaming",Tiktok Comparisons,One-time full payment,Techno,4,No,4,Yes,around 10 lakhs,5
+04/02/2026 09:33:19,2004,Female,Apple,3 years,"Camera, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,3,No,above 20 lakhs,3
+04/02/2026 10:56:44,2005,Male,Redmi,1 year,"Battery, SOC",Tech Youtuber,One-time full payment,Redmi,4,No,2,No,around 10 lakhs,3
+04/02/2026 11:22:38,2004,Female,Samsung,2 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+04/02/2026 12:44:29,2003,Female,Apple,2 years,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Xiaomi,5,Yes,4,Maybe,above 20 lakhs,5
+05/02/2026 07:33:44,2007,Male,Redmi,2 years,"Gaming, Affordability",Friend/Family,One-time full payment,Redmi,4,No,1,No,around 10 lakhs,3
+05/02/2026 08:22:18,2004,Female,Vivo,3 years,"Camera, Battery",In-store demos,One-time full payment,Redmi,2,No,4,No,around 15 lakhs,3
+05/02/2026 09:44:56,2005,Female,Apple,1 year,"Camera, Brand Image",Social Media Ads,One-time full payment,Samsung,4,Yes,3,No,above 20 lakhs,3
+05/02/2026 10:33:22,2004,Male,Xiaomi,2 years,"Battery, Affordability, SOC",Tech Youtuber,One-time full payment,Vivo,3,No,3,Maybe,around 15 lakhs,5
+05/02/2026 11:56:47,2003,Female,Redmi,3 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,3,No,4,No,around 10 lakhs,5
+05/02/2026 12:22:33,2006,Female,Apple,2 years,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Redmi,5,No,5,No,above 20 lakhs,5
+06/02/2026 07:22:55,2004,Female,Samsung,4 years,"Camera, Battery",In-store demos,One-time full payment,Xiaomi,4,No,3,Maybe,around 15 lakhs,4
+06/02/2026 08:44:33,2005,Male,Apple,1 year,"Camera, Gaming",Tech Youtuber,One-time full payment,Samsung,4,No,4,No,above 20 lakhs,5
+06/02/2026 09:33:27,2004,Female,Redmi,3 years,"Battery, Affordability",Friend/Family,One-time full payment,Redmi,3,No,2,No,around 8 lakhs,4
+06/02/2026 10:56:44,2003,Female,Samsung,2 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Apple,4,Yes,4,Yes,around 20 lakhs,5
+06/02/2026 11:22:19,2007,Female,Redmi,1 year,"Camera, Gaming",Tech Youtuber,One-time full payment,Redmi,4,No,3,Maybe,around 10 lakhs,3
+06/02/2026 12:44:38,2004,Male,Apple,3 years,"Camera, SOC",Friend/Family,One-time full payment,Vivo,4,Yes,3,No,above 20 lakhs,5
+07/02/2026 07:33:22,2005,Female,Xiaomi,2 years,"Battery, Affordability",In-store demos,One-time full payment,Samsung,3,No,4,No,around 10 lakhs,3
+07/02/2026 08:44:19,2004,Female,Apple,2 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Redmi,5,Yes,4,Maybe,above 20 lakhs,3
+07/02/2026 09:33:56,2003,Male,Redmi,3 years,"Gaming, Battery",Tech Youtuber,One-time full payment,Xiaomi,4,No,2,No,around 15 lakhs,3
+07/02/2026 10:56:33,2006,Female,Samsung,2 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+07/02/2026 11:22:47,2004,Female,Apple,1 year,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,No,above 20 lakhs,3
+07/02/2026 12:44:22,2005,Male,Redmi,2 years,"Battery, Gaming, Affordability",Friend/Family,One-time full payment,Redmi,5,No,2,No,around 10 lakhs,3
+08/02/2026 07:22:44,2004,Female,Redmi,3 years,"Camera, Battery, Affordability",Tech Youtuber,One-time full payment,Vivo,3,No,4,Maybe,around 15 lakhs,4
+08/02/2026 08:44:19,2003,Female,Samsung,6 months,"Camera, Brand Image",Friend/Family,One-time full payment,Samsung,5,Yes,5,Yes,above 20 lakhs,5
+08/02/2026 09:33:47,2005,Female,Redmi,2 months,"Battery, Gaming",Tiktok Comparisons,One-time full payment,Redmi,4,No,3,No,around 10 lakhs,3
+08/02/2026 10:56:22,2006,Female,Apple,3 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,4,Maybe,above 20 lakhs,4
+09/02/2026 07:22:34,2004,Female,Redmi,2 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,2,No,4,Maybe,around 15 lakhs,4
+09/02/2026 08:44:19,2003,Female,Samsung,3 months,Camera,Friend/Family,One-time full payment,Samsung,4,No,5,Yes,above 20 lakhs,5
+09/02/2026 09:33:47,2005,Female,Redmi,3 months,"Battery, Gaming",Friend/Family,One-time full payment,Samsung,5,No,3,No,around 10 lakhs,3
+09/02/2026 10:56:22,2005,Female,Samsung,4 years,"Camera, Battery",Social Media Ads,One-time full payment,Redmi,4,Yes,4,Maybe,around 10 lakhs,5
+09/02/2026 11:22:58,2004,Female,Samsung,2 years,"Camera, Battery",In-store demos,One-time full payment,Xiaomi,4,No,3,Yes,around 15 lakhs,4
+09/02/2026 12:44:33,2004,Male,Redmi,5 years,"Battery, Affordability, SOC",Tech Youtuber,One-time full payment,Samsung,5,No,5,No,around 15 lakhs,5
+09/02/2026 13:18:29,2004,Male,Apple,3 years,"Camera, Brand Image",Own research,One-time full payment,Xiaomi,4,Yes,4,Maybe,around 20 lakhs,5
+09/02/2026 14:33:55,2007,Male,Techno,2 years,Battery,Friend/Family,One-time full payment,Oppo,3,No,5,Maybe,around 20 lakhs,5
+09/02/2026 15:56:44,2004,Female,Redmi,5 months,"Camera, Battery, Gaming",Tiktok Comparisons,Monthly installments,Redmi,3,No,3,Maybe,around 6 lakhs,5
+09/02/2026 16:22:18,2005,Female,Samsung,4 months,"Camera, Battery",In-store demos,One-time full payment,Apple,5,No,5,Maybe,above 20 lakhs,5
+10/02/2026 07:33:22,2004,Female,Apple,1 year,Camera,Tiktok Comparisons,One-time full payment,Redmi,5,Yes,4,No,above 20 lakhs,5
+10/02/2026 08:44:56,2004,Female,Redmi,4 years,"Camera, Battery, Gaming",Tech Youtuber,One-time full payment,Xiaomi,4,No,3,Maybe,around 15 lakhs,4
+10/02/2026 09:22:33,2007,Male,Redmi,3 years,Gaming,Tech Youtuber,One-time full payment,Redmi,4,No,1,No,around 10 lakhs,2
+10/02/2026 10:56:47,2006,Female,Apple,3 months,"Camera, Battery",Friend/Family,One-time full payment,Redmi,5,Yes,2,Maybe,above 20 lakhs,5
+10/02/2026 11:33:28,1976,Female,Redmi,2 months,"Camera, Brand Image",Friend/Family,One-time full payment,Vivo,4,No,3,Maybe,around 8 lakhs,3
+10/02/2026 12:44:19,2003,Female,Redmi,5 years,Camera,Tech Youtuber,One-time full payment,Redmi,2,No,4,Maybe,around 15 lakhs,5
+10/02/2026 13:22:44,2000,Male,Infinix,1 year,"Camera, Affordability",Tech Youtuber,One-time full payment,Redmi,1,No,1,Maybe,Affordable,1
+10/02/2026 14:56:33,2005,Male,Samsung,3 years,Brand Image,In-store demos,One-time full payment,Huawei,4,No,3,No,around 10 lakhs,4
+10/02/2026 15:33:18,2002,Female,Xiaomi,25 days,"Camera, Battery, Brand, Affordability",Tech Youtuber,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+11/02/2026 07:44:22,2003,Male,Apple,1 year,Camera,Tiktok Comparisons,One-time full payment,Xiaomi,4,Yes,3,No,above 20 lakhs,5
+11/02/2026 08:22:56,2004,Male,Honor,3 years,"Camera, Battery",Social Media Ads,One-time full payment,Realmi,4,No,4,Yes,around 15 lakhs,3
+11/02/2026 09:33:19,2005,Male,Redmi,1 month,"Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,5,No,4,No,around 10 lakhs,3
+11/02/2026 10:56:44,2004,Male,Apple,4 years,"Gaming, Affordability",Friend/Family,One-time full payment,Vivo,4,No,4,Maybe,around 15 lakhs,5
+11/02/2026 11:22:37,2004,Male,Apple,4 years,SOC,Tech Youtuber,One-time full payment,Samsung,2,Yes,1,No,above 20 lakhs,5
+11/02/2026 12:44:28,2006,Female,Redmi,4 months,"Camera, Battery, Affordability, SOC",Tiktok Comparisons,One-time full payment,Techno,4,No,4,Yes,around 10 lakhs,5
+11/02/2026 13:33:55,2005,Female,Xiaomi,4 months,Camera,Tech Youtuber,One-time full payment,Techno,3,No,3,Maybe,around 10 lakhs,5
+11/02/2026 14:22:49,2004,Female,Redmi,4 years,"Camera, Battery, Gaming",Tech Youtuber,One-time full payment,Redmi,4,No,3,Maybe,around 15 lakhs,4
+12/02/2026 07:33:44,2003,Male,Realmi,3 years,"Camera, Battery, Gaming, Affordability",Tech Youtuber,One-time full payment,Xiaomi,3,No,3,Maybe,around 20 lakhs,4
+12/02/2026 08:22:18,2007,Male,Redmi,1 month,"Battery, Gaming, SOC",Tiktok Comparisons,One-time full payment,Redmi,5,No,2,No,around 20 lakhs,5
+12/02/2026 09:44:56,2004,Female,Redmi,5 years,Brand Image,In-store demos,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+12/02/2026 10:33:22,2004,Male,Redmi,4 months,"Camera, SOC",Tech Youtuber,One-time full payment,Vivo,1,Yes,4,Maybe,around 15 lakhs,4
+12/02/2026 11:56:47,2004,Female,Apple,3 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,Maybe,above 20 lakhs,3
+12/02/2026 12:22:33,2005,Male,Apple,9 months,Camera,Tiktok Comparisons,One-time full payment,Samsung,4,No,4,No,above 20 lakhs,5
+12/02/2026 13:44:29,2006,Male,Apple,1.5 years,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Vivo,5,No,5,No,above 20 lakhs,5
+12/02/2026 14:33:18,2004,Female,Apple,2 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,4,Yes,around 20 lakhs,5
+13/02/2026 07:22:55,1987,Female,Vivo,2 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,4,No,2,Maybe,around 15 lakhs,5
+13/02/2026 08:44:33,1991,Female,Xiaomi,4 years,"Battery, Affordability",In-store demos,One-time full payment,Apple,3,No,3,No,around 10 lakhs,4
+13/02/2026 09:33:27,1972,Female,Infinix,3 years,Affordability,In-store demos,Second-hand,Redmi,3,No,3,Yes,around 8 lakhs,3
+13/02/2026 10:56:44,1981,Male,Xiaomi,5 years,"Battery, Affordability",Friend/Family,One-time full payment,Vivo,4,No,4,No,around 8 lakhs,4
+13/02/2026 11:22:19,2000,Female,Xiaomi,4 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Samsung,3,No,1,Maybe,around 6 lakhs,1
+13/02/2026 12:44:38,2004,Female,Apple,2 years,"Camera, Battery",Tiktok Comparisons,One-time full payment,Redmi,4,No,4,No,above 20 lakhs,4
+13/02/2026 13:33:22,2004,Female,Samsung,3 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+14/02/2026 07:22:44,2003,Female,Honor,1 year,"Camera, Battery, Brand Image",Tech Youtuber,One-time full payment,Redmi,3,Yes,4,Yes,around 20 lakhs,5
+14/02/2026 08:44:19,2003,Female,Infinix,2.5 years,Affordability,Friend/Family,One-time full payment,Redmi,1,No,3,No,around 10 lakhs,4
+14/02/2026 09:33:56,2003,Female,Infinix,1 year,"Camera, Battery",In-store demos,One-time full payment,Redmi,2,No,4,No,around 20 lakhs,4
+14/02/2026 10:56:33,2003,Female,Samsung,3 years,"Camera, Battery",Friend/Family,One-time full payment,Samsung,4,No,4,No,around 15 lakhs,5
+14/02/2026 11:22:47,2004,Male,Oppo,2 months,"Camera, Battery, SOC",Tech Youtuber,Second-hand,Samsung,2,Yes,3,No,above 20 lakhs,3
+14/02/2026 12:44:22,2003,Female,Oppo,1 month,"Camera, Battery",In-store demos,One-time full payment,Redmi,4,Yes,4,No,around 20 lakhs,4
+14/02/2026 13:33:48,2003,Male,Redmi,1 year,"Battery, Gaming, Affordability, SOC",Friend/Family,One-time full payment,Samsung,5,No,1,No,around 10 lakhs,4
+15/02/2026 07:44:22,2004,Female,Apple,3 years,"Camera, Brand Image",Friend/Family,One-time full payment,Samsung,5,Yes,4,No,above 20 lakhs,3
+15/02/2026 08:22:56,2004,Female,Apple,3 years,"Camera, Brand Image, SOC",Social Media Ads,One-time full payment,Apple,5,Yes,2,No,above 20 lakhs,3
+15/02/2026 09:33:19,2004,Female,Samsung,7 years,"Gaming, Affordability",Friend/Family,One-time full payment,Samsung,3,No,3,No,around 15 lakhs,5
+15/02/2026 10:56:44,2005,Female,Samsung,5 years,"Battery, Brand Image",Social Media Ads,One-time full payment,Xiaomi,2,No,4,Maybe,around 20 lakhs,5
+15/02/2026 11:22:38,2003,Female,Samsung,4 years,Camera,Tiktok Comparisons,One-time full payment,Samsung,4,Yes,4,Yes,around 15 lakhs,5
+15/02/2026 12:44:29,2005,Female,Redmi,3 months,"Camera, Battery, Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,4,No,3,No,around 10 lakhs,3
+16/02/2026 07:33:44,2005,Female,Apple,3 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Apple,4,Yes,3,No,above 20 lakhs,3
+16/02/2026 08:22:18,2002,Female,Apple,2 years,"Battery, Brand Image",In-store demos,One-time full payment,Huawei,3,No,3,Yes,above 20 lakhs,5
+16/02/2026 09:44:56,2007,Female,Xiaomi,3 months,Camera,Social Media Ads,Monthly installments,Samsung,4,Yes,3,No,around 15 lakhs,3
+16/02/2026 10:33:22,2002,Female,Apple,2 years,"Battery, Brand Image",In-store demos,One-time full payment,Huawei,3,No,3,Yes,above 20 lakhs,5
+16/02/2026 11:56:47,2004,Female,Vivo,4 years,"Camera, Gaming",In-store demos,One-time full payment,Redmi,1,No,5,No,above 20 lakhs,2
+16/02/2026 12:22:33,2004,Female,Redmi,9 months,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Redmi,2,No,1,No,around 8 lakhs,5
+16/02/2026 13:44:29,2004,Female,Apple,1 year,Camera,Friend/Family,One-time full payment,Apple,1,Yes,1,Maybe,above 20 lakhs,1
+17/02/2026 07:22:55,2002,Female,Apple,2 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Apple,5,Yes,4,No,above 20 lakhs,5
+17/02/2026 08:44:33,2004,Female,Redmi,2 years,Camera,Friend/Family,One-time full payment,Redmi,3,No,2,No,around 8 lakhs,3
+17/02/2026 09:33:27,2006,Female,Huawei,6 years,"Camera, Gaming",Own research,One-time full payment,Huawei,5,No,3,No,around 10 lakhs,5
+17/02/2026 10:56:44,2005,Female,Techno,2 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,2,No,4,Yes,around 10 lakhs,5
+17/02/2026 11:22:19,2005,Female,Apple,7 months,"Camera, Battery, SOC",Friend/Family,Second-hand,Oppo,4,No,4,No,around 20 lakhs,5
+17/02/2026 12:44:38,2004,Female,Redmi,2 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,3,No,3,Maybe,around 15 lakhs,4
+17/02/2026 13:33:22,2003,Female,Samsung,2 years,"Camera, Battery",Tech Youtuber,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+18/02/2026 07:22:44,2005,Male,Redmi,2 years,"Gaming, Battery",Friend/Family,One-time full payment,Redmi,4,No,2,No,around 10 lakhs,3
+18/02/2026 08:44:19,2004,Female,Apple,2 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,Maybe,above 20 lakhs,3
+18/02/2026 09:33:56,2006,Female,Samsung,3 years,"Camera, Battery",In-store demos,One-time full payment,Xiaomi,4,No,4,No,around 15 lakhs,5
+18/02/2026 10:56:33,2003,Male,Apple,2 years,"Camera, SOC",Tech Youtuber,One-time full payment,Vivo,4,No,3,No,above 20 lakhs,5
+18/02/2026 11:22:47,2004,Female,Redmi,1 year,"Camera, Affordability",Social Media Ads,One-time full payment,Redmi,3,No,3,Maybe,around 8 lakhs,3
+18/02/2026 12:44:22,2005,Female,Apple,1 year,"Camera, Battery",Friend/Family,One-time full payment,Redmi,5,Yes,4,No,above 20 lakhs,5
+18/02/2026 13:33:48,2004,Male,Samsung,3 years,"Battery, Gaming",Tech Youtuber,One-time full payment,Huawei,3,No,3,No,around 15 lakhs,4
+19/02/2026 07:44:22,2003,Female,Xiaomi,2 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Samsung,3,No,4,Maybe,around 10 lakhs,5
+19/02/2026 08:22:56,2006,Female,Redmi,3 months,"Camera, Gaming",Tiktok Comparisons,One-time full payment,Techno,4,No,4,Yes,around 10 lakhs,5
+19/02/2026 09:33:19,2004,Female,Apple,3 years,"Camera, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,3,No,above 20 lakhs,3
+19/02/2026 10:56:44,2005,Male,Redmi,1 year,"Battery, SOC",Tech Youtuber,One-time full payment,Redmi,4,No,2,No,around 10 lakhs,3
+19/02/2026 11:22:38,2004,Female,Samsung,2 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+19/02/2026 12:44:29,2003,Female,Apple,2 years,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Xiaomi,5,Yes,4,Maybe,above 20 lakhs,5
+20/02/2026 07:33:44,2007,Male,Redmi,2 years,"Gaming, Affordability",Friend/Family,One-time full payment,Redmi,4,No,1,No,around 10 lakhs,3
+20/02/2026 08:22:18,2004,Female,Vivo,3 years,"Camera, Battery",In-store demos,One-time full payment,Redmi,2,No,4,No,around 15 lakhs,3
+20/02/2026 09:44:56,2005,Female,Apple,1 year,"Camera, Brand Image",Social Media Ads,One-time full payment,Samsung,4,Yes,3,No,above 20 lakhs,3
+20/02/2026 10:33:22,2004,Male,Xiaomi,2 years,"Battery, Affordability, SOC",Tech Youtuber,One-time full payment,Vivo,3,No,3,Maybe,around 15 lakhs,5
+20/02/2026 11:56:47,2003,Female,Redmi,3 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,3,No,4,No,around 10 lakhs,5
+20/02/2026 12:22:33,2006,Female,Apple,2 years,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Redmi,5,No,5,No,above 20 lakhs,5
+21/02/2026 07:22:55,2004,Female,Samsung,4 years,"Camera, Battery",In-store demos,One-time full payment,Xiaomi,4,No,3,Maybe,around 15 lakhs,4
+21/02/2026 08:44:33,2005,Male,Apple,1 year,"Camera, Gaming",Tech Youtuber,One-time full payment,Samsung,4,No,4,No,above 20 lakhs,5
+21/02/2026 09:33:27,2004,Female,Redmi,3 years,"Battery, Affordability",Friend/Family,One-time full payment,Redmi,3,No,2,No,around 8 lakhs,4
+21/02/2026 10:56:44,2003,Female,Samsung,2 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Apple,4,Yes,4,Yes,around 20 lakhs,5
+21/02/2026 11:22:19,2007,Female,Redmi,1 year,"Camera, Gaming",Tech Youtuber,One-time full payment,Redmi,4,No,3,Maybe,around 10 lakhs,3
+21/02/2026 12:44:38,2004,Male,Apple,3 years,"Camera, SOC",Friend/Family,One-time full payment,Vivo,4,Yes,3,No,above 20 lakhs,5
+22/02/2026 07:33:22,2005,Female,Xiaomi,2 years,"Battery, Affordability",In-store demos,One-time full payment,Samsung,3,No,4,No,around 10 lakhs,3
+22/02/2026 08:44:19,2004,Female,Apple,2 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Redmi,5,Yes,4,Maybe,above 20 lakhs,3
+22/02/2026 09:33:56,2003,Male,Redmi,3 years,"Gaming, Battery",Tech Youtuber,One-time full payment,Xiaomi,4,No,2,No,around 15 lakhs,3
+22/02/2026 10:56:33,2006,Female,Samsung,2 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+22/02/2026 11:22:47,2004,Female,Apple,1 year,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,No,above 20 lakhs,3
+22/02/2026 12:44:22,2005,Male,Redmi,2 years,"Battery, Gaming, Affordability",Friend/Family,One-time full payment,Redmi,5,No,2,No,around 10 lakhs,3
+23/02/2026 07:22:44,2004,Female,Redmi,3 years,"Camera, Battery, Affordability",Tech Youtuber,One-time full payment,Vivo,3,No,4,Maybe,around 15 lakhs,4
+23/02/2026 08:44:19,2003,Female,Samsung,6 months,"Camera, Brand Image",Friend/Family,One-time full payment,Samsung,5,Yes,5,Yes,above 20 lakhs,5
+23/02/2026 09:33:47,2005,Female,Redmi,2 months,"Battery, Gaming",Tiktok Comparisons,One-time full payment,Redmi,4,No,3,No,around 10 lakhs,3
+23/02/2026 10:56:22,2006,Female,Apple,3 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,4,Maybe,above 20 lakhs,4
+23/02/2026 11:22:58,2004,Male,Samsung,1 year,"Camera, Battery, SOC",Tech Youtuber,One-time full payment,Xiaomi,3,No,3,No,around 15 lakhs,4
+23/02/2026 12:44:33,2004,Female,Apple,4 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,4,Yes,4,No,above 20 lakhs,3
+23/02/2026 13:18:29,2007,Male,Redmi,1 year,"Gaming, Battery",Friend/Family,One-time full payment,Oppo,4,No,2,Maybe,around 10 lakhs,3
+23/02/2026 14:33:55,2005,Female,Samsung,5 years,"Camera, Battery, Affordability",In-store demos,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+23/02/2026 15:56:44,2004,Female,Redmi,8 months,"Camera, Gaming",Tiktok Comparisons,Monthly installments,Redmi,2,No,3,Maybe,around 6 lakhs,4
+23/02/2026 16:22:19,2003,Female,Apple,2 years,"Camera, Battery",Friend/Family,One-time full payment,Xiaomi,5,Yes,5,No,above 20 lakhs,5
+12/04/2026 21:10:38,2004,Male,Redmi,2 years,"Camera/video resolution, Battery Life, Affordability",Friend/Family Recommendations,One-time full payment,Vivo,1,No,4,Maybe,around 15 lakhs,2
+12/04/2026 21:12:43,2003,Female,Samsung,3months,Camera/video resolution,Friend/Family Recommendations,One-time full payment,Samsung,4,No,5,Yes,above 20 lakhs,5
+12/04/2026 21:13:04,2003,Female,Redmi,3 month,"Battery Life, Gaming Performance, Affordability",Friend/Family Recommendations,One-time full payment,Samsung,5,No,3,No,around 10 lakhs,4
+12/04/2026 21:16:27,2005,Female,Samsung,4 years,"Camera/video resolution, Battery Life, Affordability",Social Media Ads,One-time full payment,Redmi,4,Yes,4,Maybe,around 10 lakhs,5
+12/04/2026 21:45:42,2004,Female,Samsung,2years,"Camera/video resolution, Battery Life, Affordability",In-store demos,One-time full payment,Xiaomi,4,No,3,Yes,around 15 lakhs,2
+12/04/2026 21:50:07,2004,Male,Redmi,Almost 5 years,"Battery Life, Affordability, System On Chip (SOC)",Tech Youtuber/Vlogger,One-time full payment,Samsung,5,No,5,No,around 15 lakhs,3
+12/04/2026 21:53:03,2004,Male,Apple,3 years,"Camera/video resolution, Brand Image/Status, Affordability",Own research,One-time full payment,Xiaomi,4,Yes,4,Maybe,around 20 lakhs,3
+12/04/2026 22:28:31,2007,Male,Techno,2နှစ်,Battery Life,Friend/Family Recommendations,One-time full payment,Oppo,3,No,5,Maybe,around 20 lakhs,3
+12/04/2026 22:56:57,2004,Female,Redmi,5 months,"Camera/video resolution, Battery Life, Gaming Performance",Tiktok Comparisons,Monthly installments/Contract,Redmi,3,No,3,Maybe,around 6 lakhs,3
+12/04/2026 23:17:39,2005,Female,Samsung,၄လ,"Camera/video resolution, Battery Life",In-store demos,One-time full payment,Apple,5,No,5,Maybe,above 20 lakhs,3
+12/04/2026 23:27:17,2004,Female,Apple,1year,Camera/video resolution,Tiktok Comparisons,One-time full payment,Redmi,5,Yes,4,No,above 20 lakhs,3
+12/04/2026 23:42:59,2004,Female,Redmi,4 yrs,"Camera/video resolution, Battery Life, Gaming Performance",Tech Youtuber/Vlogger,One-time full payment,Xiaomi,4,No,3,Maybe,around 15 lakhs,2
+13/04/2026 07:19:18,2007,Male,Redmi,3yr,Gaming Performance,Tech Youtuber/Vlogger,One-time full payment,Redmi,4,No,1,No,around 10 lakhs,1
+13/04/2026 09:25:59,2006,Female,Apple,3months,"Camera/video resolution, Battery Life",Friend/Family Recommendations,One-time full payment,Redmi,5,Yes,2,Maybe,above 20 lakhs,3
+13/04/2026 09:55:04,1976,Female,Redmi,2 months,"Camera/video resolution, Brand Image/Status, Affordability",Friend/Family Recommendations,One-time full payment,Vivo,4,No,3,Maybe,around 8 lakhs,2
+13/04/2026 14:25:26,2003,Female,Redmi,5 years,Camera/video resolution,Tech Youtuber/Vlogger,One-time full payment,Redmi,2,No,4,Maybe,around 15 lakhs,3
+13/04/2026 21:39:44,2000,Male,Infinix,About one year,"Camera/video resolution, Affordability",Tech Youtuber/Vlogger,One-time full payment,Redmi,1,No,1,Maybe,As affordable as I can,1
+13/04/2026 21:40:28,2005,Male,Samsung,3years,Brand Image/Status,In-store demos,One-time full payment,Huawei,4,,3,No,around 10 lakhs,2
+13/04/2026 21:41:42,2002,Female,Xiaomi,25ရက်,"Camera/video resolution, Battery Life, Brand Image/Status, Affordability, CPU",Tech Youtuber/Vlogger,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,3
+13/04/2026 21:43:54,2003,Male,Apple,1 year,Camera/video resolution,Tiktok Comparisons,One-time full payment,Xiaomi,4,Yes,3,No,above 20 lakhs,3
+13/04/2026 21:48:41,2004,Male,Honor,3 years,"Camera/video resolution, Battery Life",Social Media Ads,One-time full payment,Realmi,4,No,4,Yes,around 15 lakhs,2
+13/04/2026 22:04:01,2005,Male,Redmi,1 month,"Gaming Performance, SOC(Like Snapdragon)",Tech Youtuber/Vlogger,One-time full payment,Redmi,5,No,4,No,around 10 lakhs,2
+14/04/2026 20:04:26,2004,Male,Apple,Above 4 years,"Gaming Performance, Affordability",Friend/Family Recommendations,One-time full payment,Vivo,4,No,4,Maybe,around 15 lakhs,3
+14/04/2026 20:24:12,2004,Male,Apple,4 နှစ်,System On Chip (SOC),Tech Youtuber/Vlogger,One-time full payment,Samsung,2,Yes,1,No,above 20 lakhs,3
+16/04/2026 16:37:00,2006,Female,Redmi,About 4 months or 5 months,"Camera/video resolution, Battery Life, Affordability, System On Chip (SOC)",Tiktok Comparisons,One-time full payment,Techno,4,No,4,Yes,around 10 lakhs,3
+18/04/2026 11:52:32,2005,Female,Xiaomi,4 months,Camera/video resolution,Tech Youtuber/Vlogger,One-time full payment,Techno,3,No,3,Maybe,around 10 lakhs,3
+18/04/2026 17:53:13,2004,Female,Redmi,4 yr,"Camera/video resolution, Battery Life, Gaming Performance",Tech Youtuber/Vlogger,One-time full payment,Redmi,4,,3,Maybe,around 15 lakhs,2
+18/04/2026 17:54:00,2003,Male,Realmi,3 yr,"Camera/video resolution, Battery Life, Gaming Performance, Affordability",Tech Youtuber/Vlogger,One-time full payment,Xiaomi,3,No,3,Maybe,around 20 lakhs,2
+19/06/2026 16:12:17,2007,Male,Redmi,1 month,"Battery Life, Gaming Performance, System On Chip (SOC)",Tiktok Comparisons,One-time full payment,Redmi,5,No,2,No,around 20 lakhs,3
+19/06/2026 19:51:12,2004,Female,Redmi,5years,Brand Image/Status,In-store demos,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,3
+19/06/2026 19:55:42,2004,Male,Redmi,4လ,"Camera/video resolution, System On Chip (SOC),",Tech Youtuber/Vlogger,One-time full payment,Vivo,1,Yes,4,Maybe,around 15 lakhs,2
+19/06/2026 19:56:32,2004,Female,Apple,3 years,"Camera/video resolution, Brand Image/Status",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,Maybe,above 20 lakhs,2
+19/06/2026 19:57:58,2005,Male,Apple,9 months,Camera/video resolution,Tiktok Comparisons,One-time full payment,Samsung,4,No,4,No,above 20 lakhs,3
+19/06/2026 20:06:17,2006,Male,Apple,1.5 year,"Camera/video resolution, Battery Life, Brand Image/Status, Affordability",Tiktok Comparisons,One-time full payment,Vivo,5,No,5,No,above 20 lakhs,3
+19/06/2026 21:26:40,2004,Female,Apple,2years,"Camera/video resolution, Battery Life, Brand Image/Status",Social Media Ads,One-time full payment,Samsung,5,Yes,4,Yes,around 20 lakhs,3
+20/06/2026 07:54:25,1987,Female,Vivo,2years,"Camera/video resolution, Battery Life",Friend/Family Recommendations,One-time full payment,Vivo,4,No,2,Maybe,around 15 lakhs,3
+20/06/2026 07:55:44,1991,Female,Xiaomi,4years,"Battery Life, Affordability",In-store demos,One-time full payment,Apple,3,No,3,No,around 10 lakhs,2
+20/06/2026 07:58:50,1972,Female,Infinix,3years,Affordability,In-store demos,Buying second-hand/used,Redmi,3,No,3,Yes,around 8 lakhs,2
+20/06/2026 08:00:07,1981,Male,Xiaomi,5years,"Battery Life, Affordability",Friend/Family Recommendations,One-time full payment,Vivo,4,No,4,No,around 8 lakhs,2
+20/06/2026 08:15:33,2000,Female,Xiaomi,4 years,"Camera/video resolution, Battery Life, Affordability",Friend/Family Recommendations,One-time full payment,Samsung,3,No,1,Maybe,around 6 lakhs,1
+20/06/2026 09:52:44,2004,Female,Apple,2years,"Camera/video resolution, Battery Life",Tiktok Comparisons,One-time full payment,Redmi,4,No,4,No,above 20 lakhs,2
+20/06/2026 10:01:39,2004,Female,Samsung,3years,"Camera/video resolution, Battery Life",Friend/Family Recommendations,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,3
+20/06/2026 10:37:38,2003,Female,Honor,1 yr,"Camera/video resolution, Battery Life, Brand Image/Status, Affordability",Tech Youtuber/Vlogger,One-time full payment,Redmi,3,Yes,4,Yes,around 20 lakhs,3
+20/06/2026 11:06:21,5.10.2003,Female,Infinix,2.5 years,Affordability,Friend/Family Recommendations,One-time full payment,Redmi,1,No,3,No,around 10 lakhs,2
+20/06/2026 14:45:48,2003,Female,Infinix,1 year,"Camera/video resolution, Battery Life",In-store demos,One-time full payment,Redmi,2,No,4,No,around 20 lakhs,2
+20/06/2026 20:09:01,2003,Female,Samsung,3years,"Camera/video resolution, Battery Life",Friend/Family Recommendations,One-time full payment,Samsung,4,No,4,No,around 15 lakhs,3
+21/06/2026 07:28:30,2004,Male,Oppo,2 months,"Camera/video resolution, Battery Life, System On Chip (SOC)",Tech Youtuber/Vlogger,Buying second-hand/used,Samsung,2,Yes,3,No,above 20 lakhs,2
+21/06/2026 14:39:53,2003,Female,Oppo,1 months,"Camera/video resolution, Battery Life",In-store demos,One-time full payment,Redmi,4,Yes,4,No,around 20 lakhs,2
+21/06/2026 18:39:45,2003,Male,Redmi,1+ year,"Battery Life, Gaming Performance, Affordability, System On Chip (SOC)",Friend/Family Recommendations,One-time full payment,Samsung,5,No,1,No,around 10 lakhs,2
+01/07/2026 18:17:28,2004,Female,Apple,3 years,"Camera/video resolution, Brand Image/Status, Affordability",Friend/Family Recommendations,One-time full payment,Samsung,5,Yes,4,No,above 20 lakhs,2
+02/07/2026 18:04:36,2004,Female,Apple,3 yrs,"Camera/video resolution, Brand Image/Status, System On Chip (SOC)",Social Media Ads,One-time full payment,Apple,5,Yes,2,No,above 20 lakhs,2
+02/07/2026 18:04:57,၂၀၀၄,Female,Samsung,၇နှစ်,"Gaming Performance, Affordability",Friend/Family Recommendations,One-time full payment,Samsung,3,No,3,No,around 15 lakhs,3
+02/07/2026 18:05:55,2005,Female,Samsung,5yrs,"Battery Life, Brand Image/Status, Affordability",Social Media Ads,One-time full payment,Xiaomi,2,No,4,Maybe,around 20 lakhs,3
+02/07/2026 18:07:06,2003,Female,Samsung,4yr,Camera/video resolution,Tiktok Comparisons,One-time full payment,Samsung,4,Yes,4,Yes,around 15 lakhs,3
+02/07/2026 18:15:22,2005,Female,Redmi,3 months,"Camera/video resolution, Battery Life, Gaming Performance, System On Chip (SOC)",Tech Youtuber/Vlogger,One-time full payment,Redmi,4,No,3,No,around 10 lakhs,2
+02/07/2026 18:20:10,9.9.2005,Female,Apple,Over 3 years,"Camera/video resolution, Battery Life, Brand Image/Status",Social Media Ads,One-time full payment,Apple,4,Yes,3,No,above 20 lakhs,2
+02/07/2026 18:29:46,2002,Female,Apple,2 years,"Battery Life, Brand Image/Status",In-store demos,One-time full payment,Huawei,3,No,3,Yes,above 20 lakhs,3
+02/07/2026 18:35:57,2007,Female,Xiaomi,3 လ,Camera/video resolution,Social Media Ads,Monthly installments/Contract,Samsung,4,Yes,3,No,around 15 lakhs,2
+02/07/2026 18:37:46,2002,Female,Apple,2 years,"Battery Life, Brand Image/Status",In-store demos,One-time full payment,Huawei,3,No,3,Yes,above 20 lakhs,3
+02/07/2026 18:47:32,2004,Female,Vivo,4years,"Camera/video resolution, Gaming Performance,",In-store demos,One-time full payment,Redmi,1,No,5,No,above 20 lakhs,1
+02/07/2026 19:53:25,2004,Female,Redmi,9month,"Camera/video resolution, Battery Life, Affordability",Friend/Family Recommendations,One-time full payment,Redmi,2,No,1,No,around 8 lakhs,3
+02/07/2026 19:55:17,2.11.2004,Female,Apple,maybe 1yr,Camera/video resolution,Friend/Family Recommendations,One-time full payment,Apple,1,Yes,1,Maybe,above 20 lakhs,1
+02/07/2026 20:02:07,11.3.2002,Female,Apple,Almost 2 years,"Camera/video resolution, Battery Life, Affordability",Friend/Family Recommendations,One-time full payment,Apple,5,Yes,4,No,above 20 lakhs,3
+02/07/2026 20:02:43,2004,Female,Redmi,2နှစ်,Camera/video resolution,Friend/Family Recommendations,One-time full payment,Redmi,3,No,2,No,around 8 lakhs,2
+02/07/2026 20:11:44,2006,Female,Huawei,6 years,"Camera/video resolution, Gaming Performance",ကိုယ်တိုင်စဉ်းစားတာများပါတယ်။,One-time full payment,Huawei,5,No,3,No,around 10 lakhs,3
+02/07/2026 20:58:24,2005,Female,Techno,၂နှစ်နီးပါး,"Camera/video resolution, Battery Life",Friend/Family Recommendations,One-time full payment,Redmi,2,No,4,Yes,around 10 lakhs,3
+02/07/2026 21:26:15,24.12.2005,Female,Apple,7mths,"Camera/video resolution, Battery Life, System On Chip (SOC),",Friend/Family Recommendations,Buying second-hand/used,Oppo,4,No,4,No,around 20 lakhs,3
+24/02/2026 07:22:34,2004,Female,Redmi,2 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,2,No,4,Maybe,around 15 lakhs,4
+24/02/2026 08:44:19,2003,Female,Samsung,3 months,Camera,Friend/Family,One-time full payment,Samsung,4,No,5,Yes,above 20 lakhs,5
+24/02/2026 09:33:47,2005,Female,Redmi,3 months,"Battery, Gaming",Friend/Family,One-time full payment,Samsung,5,No,3,No,around 10 lakhs,3
+24/02/2026 10:56:22,2005,Female,Samsung,4 years,"Camera, Battery",Social Media Ads,One-time full payment,Redmi,4,Yes,4,Maybe,around 10 lakhs,5
+24/02/2026 11:22:58,2004,Female,Samsung,2 years,"Camera, Battery",In-store demos,One-time full payment,Xiaomi,4,No,3,Yes,around 15 lakhs,4
+24/02/2026 12:44:33,2004,Male,Redmi,5 years,"Battery, Affordability, SOC",Tech Youtuber,One-time full payment,Samsung,5,No,5,No,around 15 lakhs,5
+24/02/2026 13:18:29,2004,Male,Apple,3 years,"Camera, Brand Image",Own research,One-time full payment,Xiaomi,4,Yes,4,Maybe,around 20 lakhs,5
+24/02/2026 14:33:55,2007,Male,Techno,2 years,Battery,Friend/Family,One-time full payment,Oppo,3,No,5,Maybe,around 20 lakhs,5
+24/02/2026 15:56:44,2004,Female,Redmi,5 months,"Camera, Battery, Gaming",Tiktok Comparisons,Monthly installments,Redmi,3,No,3,Maybe,around 6 lakhs,5
+25/02/2026 07:22:18,2005,Female,Samsung,4 months,"Camera, Battery",In-store demos,One-time full payment,Apple,5,No,5,Maybe,above 20 lakhs,5
+25/02/2026 08:33:22,2004,Female,Apple,1 year,Camera,Tiktok Comparisons,One-time full payment,Redmi,5,Yes,4,No,above 20 lakhs,5
+25/02/2026 09:44:56,2004,Female,Redmi,4 years,"Camera, Battery, Gaming",Tech Youtuber,One-time full payment,Xiaomi,4,No,3,Maybe,around 15 lakhs,4
+25/02/2026 10:22:33,2007,Male,Redmi,3 years,Gaming,Tech Youtuber,One-time full payment,Redmi,4,No,1,No,around 10 lakhs,2
+25/02/2026 11:56:47,2006,Female,Apple,3 months,"Camera, Battery",Friend/Family,One-time full payment,Redmi,5,Yes,2,Maybe,above 20 lakhs,5
+25/02/2026 12:33:28,1976,Female,Redmi,2 months,"Camera, Brand Image",Friend/Family,One-time full payment,Vivo,4,No,3,Maybe,around 8 lakhs,3
+25/02/2026 13:44:19,2003,Female,Redmi,5 years,Camera,Tech Youtuber,One-time full payment,Redmi,2,No,4,Maybe,around 15 lakhs,5
+25/02/2026 14:22:44,2000,Male,Infinix,1 year,"Camera, Affordability",Tech Youtuber,One-time full payment,Redmi,1,No,1,Maybe,Affordable,1
+26/02/2026 07:56:33,2005,Male,Samsung,3 years,Brand Image,In-store demos,One-time full payment,Huawei,4,No,3,No,around 10 lakhs,4
+26/02/2026 08:33:18,2002,Female,Xiaomi,25 days,"Camera, Battery, Brand, Affordability",Tech Youtuber,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+26/02/2026 09:44:22,2003,Male,Apple,1 year,Camera,Tiktok Comparisons,One-time full payment,Xiaomi,4,Yes,3,No,above 20 lakhs,5
+26/02/2026 10:22:56,2004,Male,Honor,3 years,"Camera, Battery",Social Media Ads,One-time full payment,Realmi,4,No,4,Yes,around 15 lakhs,3
+26/02/2026 11:33:19,2005,Male,Redmi,1 month,"Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,5,No,4,No,around 10 lakhs,3
+26/02/2026 12:56:44,2004,Male,Apple,4 years,"Gaming, Affordability",Friend/Family,One-time full payment,Vivo,4,No,4,Maybe,around 15 lakhs,5
+26/02/2026 13:22:37,2004,Male,Apple,4 years,SOC,Tech Youtuber,One-time full payment,Samsung,2,Yes,1,No,above 20 lakhs,5
+27/02/2026 07:44:28,2006,Female,Redmi,4 months,"Camera, Battery, Affordability, SOC",Tiktok Comparisons,One-time full payment,Techno,4,No,4,Yes,around 10 lakhs,5
+27/02/2026 08:33:55,2005,Female,Xiaomi,4 months,Camera,Tech Youtuber,One-time full payment,Techno,3,No,3,Maybe,around 10 lakhs,5
+27/02/2026 09:22:49,2004,Female,Redmi,4 years,"Camera, Battery, Gaming",Tech Youtuber,One-time full payment,Redmi,4,No,3,Maybe,around 15 lakhs,4
+27/02/2026 10:33:44,2003,Male,Realmi,3 years,"Camera, Battery, Gaming, Affordability",Tech Youtuber,One-time full payment,Xiaomi,3,No,3,Maybe,around 20 lakhs,4
+27/02/2026 11:22:18,2007,Male,Redmi,1 month,"Battery, Gaming, SOC",Tiktok Comparisons,One-time full payment,Redmi,5,No,2,No,around 20 lakhs,5
+28/02/2026 07:44:56,2004,Female,Redmi,5 years,Brand Image,In-store demos,One-time full payment,Redmi,4,No,4,No,around 15 lakhs,5
+28/02/2026 08:33:22,2004,Male,Redmi,4 months,"Camera, SOC",Tech Youtuber,One-time full payment,Vivo,1,Yes,4,Maybe,around 15 lakhs,4
+28/02/2026 09:56:47,2004,Female,Apple,3 years,"Camera, Brand Image",Tiktok Comparisons,One-time full payment,Samsung,5,Yes,3,Maybe,above 20 lakhs,3
+28/02/2026 10:22:33,2005,Male,Apple,9 months,Camera,Tiktok Comparisons,One-time full payment,Samsung,4,No,4,No,above 20 lakhs,5
+28/02/2026 11:44:29,2006,Male,Apple,1.5 years,"Camera, Battery, Brand Image",Tiktok Comparisons,One-time full payment,Vivo,5,No,5,No,above 20 lakhs,5
+28/02/2026 12:33:18,2004,Female,Apple,2 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Samsung,5,Yes,4,Yes,around 20 lakhs,5
+01/03/2026 07:22:55,1987,Female,Vivo,2 years,"Camera, Battery",Friend/Family,One-time full payment,Vivo,4,No,2,Maybe,around 15 lakhs,5
+01/03/2026 08:44:33,1991,Female,Xiaomi,4 years,"Battery, Affordability",In-store demos,One-time full payment,Apple,3,No,3,No,around 10 lakhs,4
+01/03/2026 09:33:27,1972,Female,Infinix,3 years,Affordability,In-store demos,Second-hand,Redmi,3,No,3,Yes,around 8 lakhs,3
+01/03/2026 10:56:44,1981,Male,Xiaomi,5 years,"Battery, Affordability",Friend/Family,One-time full payment,Vivo,4,No,4,No,around 8 lakhs,4
+01/03/2026 11:22:19,2000,Female,Xiaomi,4 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Samsung,3,No,1,Maybe,around 6 lakhs,1
+01/03/2026 12:44:38,2004,Female,Apple,2 years,"Camera, Battery",Tiktok Comparisons,One-time full payment,Redmi,4,No,4,No,above 20 lakhs,4
+02/03/2026 07:33:22,2004,Female,Samsung,3 years,"Camera, Battery",Friend/Family,One-time full payment,Redmi,4,No,4,No,around 20 lakhs,5
+02/03/2026 08:44:19,2003,Female,Honor,1 year,"Camera, Battery, Brand Image",Tech Youtuber,One-time full payment,Redmi,3,Yes,4,Yes,around 20 lakhs,5
+02/03/2026 09:33:56,2003,Female,Infinix,2.5 years,Affordability,Friend/Family,One-time full payment,Redmi,1,No,3,No,around 10 lakhs,4
+02/03/2026 10:56:33,2003,Female,Infinix,1 year,"Camera, Battery",In-store demos,One-time full payment,Redmi,2,No,4,No,around 20 lakhs,4
+02/03/2026 11:22:47,2003,Female,Samsung,3 years,"Camera, Battery",Friend/Family,One-time full payment,Samsung,4,No,4,No,around 15 lakhs,5
+02/03/2026 12:44:22,2004,Male,Oppo,2 months,"Camera, Battery, SOC",Tech Youtuber,Second-hand,Samsung,2,Yes,3,No,above 20 lakhs,3
+03/03/2026 07:33:48,2003,Female,Oppo,1 month,"Camera, Battery",In-store demos,One-time full payment,Redmi,4,Yes,4,No,around 20 lakhs,4
+03/03/2026 08:22:44,2003,Male,Redmi,1 year,"Battery, Gaming, Affordability, SOC",Friend/Family,One-time full payment,Samsung,5,No,1,No,around 10 lakhs,4
+03/03/2026 09:44:22,2004,Female,Apple,3 years,"Camera, Brand Image",Friend/Family,One-time full payment,Samsung,5,Yes,4,No,above 20 lakhs,3
+03/03/2026 10:22:56,2004,Female,Apple,3 years,"Camera, Brand Image, SOC",Social Media Ads,One-time full payment,Apple,5,Yes,2,No,above 20 lakhs,3
+03/03/2026 11:33:19,2004,Female,Samsung,7 years,"Gaming, Affordability",Friend/Family,One-time full payment,Samsung,3,No,3,No,around 15 lakhs,5
+03/03/2026 12:56:44,2005,Female,Samsung,5 years,"Battery, Brand Image",Social Media Ads,One-time full payment,Xiaomi,2,No,4,Maybe,around 20 lakhs,5
+04/03/2026 07:22:38,2003,Female,Samsung,4 years,Camera,Tiktok Comparisons,One-time full payment,Samsung,4,Yes,4,Yes,around 15 lakhs,5
+04/03/2026 08:44:29,2005,Female,Redmi,3 months,"Camera, Battery, Gaming, SOC",Tech Youtuber,One-time full payment,Redmi,4,No,3,No,around 10 lakhs,3
+04/03/2026 09:33:44,2005,Female,Apple,3 years,"Camera, Battery, Brand Image",Social Media Ads,One-time full payment,Apple,4,Yes,3,No,above 20 lakhs,3
+04/03/2026 10:22:18,2002,Female,Apple,2 years,"Battery, Brand Image",In-store demos,One-time full payment,Huawei,3,No,3,Yes,above 20 lakhs,5
+04/03/2026 11:44:56,2007,Female,Xiaomi,3 months,Camera,Social Media Ads,Monthly installments,Samsung,4,Yes,3,No,around 15 lakhs,3
+04/03/2026 12:33:22,2002,Female,Apple,2 years,"Battery, Brand Image",In-store demos,One-time full payment,Huawei,3,No,3,Yes,above 20 lakhs,5
+04/03/2026 13:56:47,2004,Female,Vivo,4 years,"Camera, Gaming",In-store demos,One-time full payment,Redmi,1,No,5,No,above 20 lakhs,2
+05/03/2026 07:22:33,2004,Female,Redmi,9 months,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Redmi,2,No,1,No,around 8 lakhs,5
+05/03/2026 08:44:29,2004,Female,Apple,1 year,Camera,Friend/Family,One-time full payment,Apple,1,Yes,1,Maybe,above 20 lakhs,1
+05/03/2026 09:22:55,2002,Female,Apple,2 years,"Camera, Battery, Affordability",Friend/Family,One-time full payment,Apple,5,Yes,4,No,above 20 lakhs,5
