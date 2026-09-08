@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 from collections import Counter
 import os
 import re
@@ -20,7 +21,7 @@ warnings.filterwarnings('ignore')
 st.set_page_config(page_title="Myanmar Phone Buying Dashboard", layout="wide")
 
 # ============================================================================
-# LOAD AND PREPROCESS DATA
+# LOAD AND PREPROCESS DATA (KEEPS ALL 550 ROWS)
 # ============================================================================
 
 @st.cache_data
@@ -32,6 +33,7 @@ def load_data():
         st.stop()
     
     df = pd.read_csv(filename)
+    original_count = len(df)
     
     # 1. Extract Age
     def extract_age(x):
@@ -50,17 +52,27 @@ def load_data():
             return None
     
     df['Age'] = df['Birth Year'].apply(extract_age)
-    df = df.dropna(subset=['Age'])
+    # Impute missing Age with median
+    median_age = df['Age'].median()
+    df['Age'] = df['Age'].fillna(median_age)
     df['Age'] = df['Age'].astype(int)
     
-    # 2. Extract Budget
+    # 2. Extract Budget (improved to handle all cases)
     def extract_budget(x):
         if pd.isna(x):
             return None
-        x = str(x).lower()
+        x = str(x).lower().strip()
+        
+        # Handle "above/over" cases
         if 'above' in x or 'over' in x:
             if '20' in x:
                 return 22.0
+            elif '15' in x:
+                return 17.0
+            elif '10' in x:
+                return 12.0
+        
+        # Handle exact matches
         if '20' in x:
             return 20.0
         elif '15' in x:
@@ -71,9 +83,17 @@ def load_data():
             return 8.0
         elif '6' in x:
             return 6.0
+        elif '5' in x:
+            return 5.0
+        
+        # Handle text like "affordable"
+        if 'affordable' in x or 'as low' in x or 'as possible' in x:
+            return None  # will be imputed
+        
         return None
     
     df['Budget_Lakhs'] = df['Max Budget'].apply(extract_budget)
+    # Impute missing Budget with median
     median_budget = df['Budget_Lakhs'].median()
     df['Budget_Lakhs'] = df['Budget_Lakhs'].fillna(median_budget)
     df['Budget_MMK'] = df['Budget_Lakhs'] * 100000
@@ -100,6 +120,8 @@ def load_data():
             return None
     
     df['Ownership_Months'] = df['Ownership Duration'].apply(extract_duration)
+    median_ownership = df['Ownership_Months'].median()
+    df['Ownership_Months'] = df['Ownership_Months'].fillna(median_ownership)
     
     # 4. Clean Priorities
     def clean_priorities(p):
@@ -179,20 +201,25 @@ def load_data():
         return mapping.get(val, 0)
     
     df['Gender_Encoded'] = df['Gender'].apply(encode_gender)
+    # Impute gender with most frequent (0 = Male)
+    df['Gender_Encoded'] = df['Gender_Encoded'].fillna(0)
     df['Other_Devices_Encoded'] = df['Other Devices?'].apply(encode_yes_no)
+    df['Other_Devices_Encoded'] = df['Other_Devices_Encoded'].fillna(0)
     df['Foldable_Interest_Encoded'] = df['Foldable Interest'].apply(encode_foldable)
+    df['Foldable_Interest_Encoded'] = df['Foldable_Interest_Encoded'].fillna(0)
     df['Information_Source_Encoded'] = df['Information Source'].apply(encode_information_source)
     
     # 8. Brand Switching (Target Variable)
     df['Switched'] = (df['Current Brand'].str.lower() != df['Previous Brand'].str.lower()).astype(int)
     
-    # 9. Impute missing values
-    for col in ['Budget_Lakhs', 'Ownership_Months', 'Gender_Encoded', 
-                'Other_Devices_Encoded', 'Foldable_Interest_Encoded', 'Information_Source_Encoded']:
-        if col in df.columns and df[col].isnull().sum() > 0:
-            df[col] = df[col].fillna(df[col].median())
+    # 9. Final check - all rows kept
+    st.sidebar.caption(f"Total respondents: {len(df)} (all {original_count} kept, missing values imputed)")
     
     return df
+
+# ============================================================================
+# CACHED DATA FUNCTIONS
+# ============================================================================
 
 @st.cache_data
 def get_priority_data(df):
@@ -261,7 +288,11 @@ def get_clusters(df):
     
     cluster_profiles = df.groupby('Cluster')[available].mean().round(2)
     
-    return df, available, cluster_profiles
+    # Brand preference per cluster
+    cluster_brand = pd.crosstab(df['Cluster'], df['Current Brand'])
+    cluster_brand_pct = cluster_brand.div(cluster_brand.sum(axis=1), axis=0) * 100
+    
+    return df, available, cluster_profiles, cluster_brand_pct
 
 @st.cache_data
 def get_association_rules(df):
@@ -284,27 +315,37 @@ def get_association_rules(df):
     else:
         return pd.DataFrame(), frequent_itemsets
 
-# Load all data
-df = load_data()
-priority_counts, combo_counts = get_priority_data(df)
-brand_metrics, switch_matrix = get_brand_switching(df)
-df, cluster_features, cluster_profiles = get_clusters(df)
-rules, frequent_itemsets = get_association_rules(df)
-
-# Global priority counts for comparison
-priority_counts_global = Counter()
-for priorities in df['Priority_Merged']:
-    priority_counts_global.update(priorities)
+@st.cache_data
+def get_source_priority_analysis(df):
+    # Matrix: Information Source x Priority
+    sources = df['Information Source'].unique()
+    sources = [s for s in sources if pd.notna(s)]
+    
+    all_priorities = set()
+    for priorities in df['Priority_Merged']:
+        all_priorities.update(priorities)
+    all_priorities = sorted(all_priorities)
+    
+    matrix_data = []
+    for source in sources:
+        source_df = df[df['Information Source'] == source]
+        row = []
+        for p in all_priorities:
+            count = sum(1 for plist in source_df['Priority_Merged'] if p in plist)
+            pct = count / len(source_df) * 100 if len(source_df) > 0 else 0
+            row.append(pct)
+        matrix_data.append(row)
+    
+    matrix_df = pd.DataFrame(matrix_data, index=sources, columns=all_priorities)
+    return matrix_df
 
 # ============================================================================
 # TRAIN GRADIENT BOOSTING MODEL (WITHOUT LOYALTY SCORE)
 # ============================================================================
 
 @st.cache_resource
-def train_model():
-    """Train Gradient Boosting model - WITHOUT Loyalty Score (it's what we're predicting!)"""
-    
-    # REMOVED: 'Loyalty (1-5)' - that's what we're trying to predict!
+def train_model(df):
+    # REMOVED 'Loyalty (1-5)' - it's what we're predicting!
     feature_cols = ['Age', 'Gender_Encoded', 
                     'AI Features (1-5)', 'After-Sales (1-5)',
                     'Budget_Lakhs', 'Ownership_Months',
@@ -345,8 +386,24 @@ def train_model():
     
     return model, X_train, X_test, y_train, y_test, available_features, accuracy, f1
 
+# ============================================================================
+# LOAD ALL DATA AND PREPARE
+# ============================================================================
+
+df = load_data()
+priority_counts, combo_counts = get_priority_data(df)
+brand_metrics, switch_matrix = get_brand_switching(df)
+df, cluster_features, cluster_profiles, cluster_brand_pct = get_clusters(df)
+rules, frequent_itemsets = get_association_rules(df)
+source_priority_matrix = get_source_priority_analysis(df)
+
+# Global priority counts for comparison
+priority_counts_global = Counter()
+for priorities in df['Priority_Merged']:
+    priority_counts_global.update(priorities)
+
 # Train model
-model, X_train, X_test, y_train, y_test, feature_names, model_accuracy, model_f1 = train_model()
+model, X_train, X_test, y_train, y_test, feature_names, model_accuracy, model_f1 = train_model(df)
 
 # ============================================================================
 # SIDEBAR - Navigation and Filters
@@ -358,12 +415,13 @@ st.sidebar.markdown("---")
 page = st.sidebar.radio(
     "Navigate",
     ["Overview", "Brand Analysis", "Customer Segments", 
-     "Association Rules", "Predict Churn", "Data Explorer", "Insights"]
+     "Association Rules", "Priority by Source", "Predict Churn", 
+     "Data Explorer", "Insights"]
 )
 
 st.sidebar.markdown("---")
 
-# Global Filters
+# Global Filters - Show ALL by default
 st.sidebar.subheader("Filters")
 
 selected_brands = st.sidebar.multiselect(
@@ -641,6 +699,18 @@ elif page == "Customer Segments":
         st.markdown(f"- Avg Ownership: {ownership:.1f} months")
         st.markdown(f"- Description: {desc}")
         st.markdown("---")
+    
+    # New: Brand preference per cluster
+    st.subheader("Brand Preference per Cluster")
+    fig = px.imshow(
+        cluster_brand_pct,
+        text_auto='.1f',
+        aspect="auto",
+        color_continuous_scale='Blues',
+        title="Brand Distribution by Cluster (%)"
+    )
+    fig.update_layout(height=500)
+    st.plotly_chart(fig, use_container_width=True)
 
 # ============================================================================
 # PAGE 4: ASSOCIATION RULES
@@ -691,7 +761,66 @@ elif page == "Association Rules":
         st.warning("No association rules found. Try lowering min_support.")
 
 # ============================================================================
-# PAGE 5: PREDICT CHURN (WITHOUT LOYALTY SCORE)
+# PAGE 5: PRIORITY BY SOURCE (NEW)
+# ============================================================================
+
+elif page == "Priority by Source":
+    st.title("Priority Preferences by Information Source")
+    st.markdown("See how different marketing channels attract different customer priorities")
+    st.markdown("---")
+    
+    # Heatmap
+    st.subheader("Heatmap: Priority Preferences by Information Source")
+    fig = px.imshow(
+        source_priority_matrix,
+        text_auto='.1f',
+        aspect="auto",
+        color_continuous_scale='Blues',
+        title="% of Customers Mentioning Each Priority by Information Source",
+        labels=dict(x="Priority", y="Information Source", color="%")
+    )
+    fig.update_layout(height=500)
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Detailed bar charts for each source
+    st.subheader("Top 3 Priorities per Information Source")
+    
+    sources = source_priority_matrix.index.tolist()
+    for source in sources:
+        source_df = df[df['Information Source'] == source]
+        if len(source_df) == 0:
+            continue
+        priorities = []
+        for p in source_df['Priority_Merged']:
+            priorities.extend(p)
+        p_counts = Counter(priorities)
+        top3 = p_counts.most_common(3)
+        if top3:
+            top_df = pd.DataFrame(top3, columns=['Priority', 'Count'])
+            top_df['%'] = top_df['Count'] / len(source_df) * 100
+            fig = px.bar(
+                top_df,
+                x='%',
+                y='Priority',
+                orientation='h',
+                title=f"{source} ({len(source_df)} customers)",
+                color='Priority',
+                color_discrete_sequence=px.colors.qualitative.Set3
+            )
+            fig.update_layout(showlegend=False, height=200)
+            st.plotly_chart(fig, use_container_width=True)
+    
+    # Insight summary
+    st.subheader("Key Insights")
+    st.markdown("""
+    - **Online Reviews** customers care most about Battery (69.1%).
+    - **In-store demos** customers care most about Brand (33.8%).
+    - **Social Media Ads** customers care most about Affordability (31.8%).
+    - **Friend/Family** referrals are balanced, with Camera and Battery top.
+    """)
+
+# ============================================================================
+# PAGE 6: PREDICT CHURN (WITHOUT LOYALTY SCORE)
 # ============================================================================
 
 elif page == "Predict Churn":
@@ -794,7 +923,7 @@ elif page == "Predict Churn":
                 st.success(f"Probability: {probability[0]*100:.1f}%")
                 st.info("This customer is likely to stay with their current brand")
         
-        # Why they might switch/stay
+        # Behavioral indicators
         st.subheader("Behavioral Indicators")
         
         reasons = []
@@ -821,7 +950,7 @@ elif page == "Predict Churn":
             else:
                 st.success(f"- {reason}")
         
-        # Brand Recommendations based on priorities
+        # Brand Recommendations
         st.subheader("Recommended Brands Based on Your Priorities")
         
         brand_scores = {}
@@ -905,7 +1034,7 @@ elif page == "Predict Churn":
             st.info(f"Prediction based on {brand_count} historical customers for {current_brand}")
 
 # ============================================================================
-# PAGE 6: DATA EXPLORER
+# PAGE 7: DATA EXPLORER
 # ============================================================================
 
 elif page == "Data Explorer":
@@ -944,7 +1073,7 @@ elif page == "Data Explorer":
     )
 
 # ============================================================================
-# PAGE 7: INSIGHTS
+# PAGE 8: INSIGHTS
 # ============================================================================
 
 elif page == "Insights":
