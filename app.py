@@ -52,18 +52,16 @@ def load_data():
             return None
     
     df['Age'] = df['Birth Year'].apply(extract_age)
-    # Impute missing Age with median
     median_age = df['Age'].median()
     df['Age'] = df['Age'].fillna(median_age)
     df['Age'] = df['Age'].astype(int)
     
-    # 2. Extract Budget (improved to handle all cases)
+    # 2. Extract Budget
     def extract_budget(x):
         if pd.isna(x):
             return None
         x = str(x).lower().strip()
         
-        # Handle "above/over" cases
         if 'above' in x or 'over' in x:
             if '20' in x:
                 return 22.0
@@ -72,7 +70,6 @@ def load_data():
             elif '10' in x:
                 return 12.0
         
-        # Handle exact matches
         if '20' in x:
             return 20.0
         elif '15' in x:
@@ -86,14 +83,12 @@ def load_data():
         elif '5' in x:
             return 5.0
         
-        # Handle text like "affordable"
         if 'affordable' in x or 'as low' in x or 'as possible' in x:
-            return None  # will be imputed
+            return None
         
         return None
     
     df['Budget_Lakhs'] = df['Max Budget'].apply(extract_budget)
-    # Impute missing Budget with median
     median_budget = df['Budget_Lakhs'].median()
     df['Budget_Lakhs'] = df['Budget_Lakhs'].fillna(median_budget)
     df['Budget_MMK'] = df['Budget_Lakhs'] * 100000
@@ -184,35 +179,63 @@ def load_data():
             return 2
         return np.nan
     
-    # 7. Encode Information Source
-    def encode_information_source(val):
+    # 7. Clean Information Source
+    def clean_information_source(val):
         if pd.isna(val):
-            return 0
+            return "Friend/Family"
+        
         val = str(val).strip().lower()
-        mapping = {
-            'friend/family': 0,
-            'social media ads': 1,
-            'in-store demos': 2,
-            'online reviews': 3,
-            'youtube/influencer': 4,
-            'tech blogs': 5,
-            'tv ads': 6
-        }
-        return mapping.get(val, 0)
+        
+        if 'friend' in val or 'family' in val:
+            return "Friend/Family"
+        elif 'social media' in val or 'facebook' in val or 'instagram' in val or 'tiktok' in val:
+            return "Social Media Ads"
+        elif 'in-store' in val or 'demo' in val or 'store' in val:
+            return "In-store Demos"
+        elif 'online review' in val or 'review' in val:
+            return "Online Reviews"
+        elif 'youtube' in val or 'influencer' in val or 'you tuber' in val:
+            return "YouTube/Influencer"
+        elif 'tech blog' in val or 'blog' in val:
+            return "Tech Blogs"
+        elif 'tv ad' in val or 'tv' in val or 'television' in val:
+            return "TV Ads"
+        elif 'comparison' in val:
+            return "Online Comparisons"
+        else:
+            return "Other"
     
+    def encode_information_source(val):
+        cleaned = clean_information_source(val)
+        mapping = {
+            "Friend/Family": 0,
+            "Social Media Ads": 1,
+            "In-store Demos": 2,
+            "Online Reviews": 3,
+            "YouTube/Influencer": 4,
+            "Tech Blogs": 5,
+            "TV Ads": 6,
+            "Online Comparisons": 7,
+            "Other": 8
+        }
+        return mapping.get(cleaned, 0)
+    
+    # Apply Information Source cleaning
+    df['Information Source'] = df['Information Source'].apply(clean_information_source)
+    df['Information_Source_Encoded'] = df['Information Source'].apply(encode_information_source)
+    
+    # 8. Encode other categoricals
     df['Gender_Encoded'] = df['Gender'].apply(encode_gender)
-    # Impute gender with most frequent (0 = Male)
     df['Gender_Encoded'] = df['Gender_Encoded'].fillna(0)
     df['Other_Devices_Encoded'] = df['Other Devices?'].apply(encode_yes_no)
     df['Other_Devices_Encoded'] = df['Other_Devices_Encoded'].fillna(0)
     df['Foldable_Interest_Encoded'] = df['Foldable Interest'].apply(encode_foldable)
     df['Foldable_Interest_Encoded'] = df['Foldable_Interest_Encoded'].fillna(0)
-    df['Information_Source_Encoded'] = df['Information Source'].apply(encode_information_source)
     
-    # 8. Brand Switching (Target Variable)
+    # 9. Brand Switching (Target Variable)
     df['Switched'] = (df['Current Brand'].str.lower() != df['Previous Brand'].str.lower()).astype(int)
     
-    # 9. Final check - all rows kept
+    # 10. Final check - all rows kept
     st.sidebar.caption(f"Total respondents: {len(df)} (all {original_count} kept, missing values imputed)")
     
     return df
@@ -288,7 +311,6 @@ def get_clusters(df):
     
     cluster_profiles = df.groupby('Cluster')[available].mean().round(2)
     
-    # Brand preference per cluster
     cluster_brand = pd.crosstab(df['Cluster'], df['Current Brand'])
     cluster_brand_pct = cluster_brand.div(cluster_brand.sum(axis=1), axis=0) * 100
     
@@ -317,7 +339,6 @@ def get_association_rules(df):
 
 @st.cache_data
 def get_source_priority_analysis(df):
-    # Matrix: Information Source x Priority
     sources = df['Information Source'].unique()
     sources = [s for s in sources if pd.notna(s)]
     
@@ -345,7 +366,6 @@ def get_source_priority_analysis(df):
 
 @st.cache_resource
 def train_model(df):
-    # REMOVED 'Loyalty (1-5)' - it's what we're predicting!
     feature_cols = ['Age', 'Gender_Encoded', 
                     'AI Features (1-5)', 'After-Sales (1-5)',
                     'Budget_Lakhs', 'Ownership_Months',
@@ -356,17 +376,14 @@ def train_model(df):
     X = df[available_features].copy()
     y = df['Switched']
     
-    # Handle missing values
     for col in X.columns:
         if X[col].isnull().sum() > 0:
             X[col] = X[col].fillna(X[col].median())
     
-    # Split data
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.3, random_state=42, stratify=y
     )
     
-    # Train Gradient Boosting
     model = GradientBoostingClassifier(
         n_estimators=100,
         max_depth=3,
@@ -379,7 +396,6 @@ def train_model(df):
     
     model.fit(X_train, y_train)
     
-    # Evaluate
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     f1 = f1_score(y_test, y_pred)
@@ -397,12 +413,10 @@ df, cluster_features, cluster_profiles, cluster_brand_pct = get_clusters(df)
 rules, frequent_itemsets = get_association_rules(df)
 source_priority_matrix = get_source_priority_analysis(df)
 
-# Global priority counts for comparison
 priority_counts_global = Counter()
 for priorities in df['Priority_Merged']:
     priority_counts_global.update(priorities)
 
-# Train model
 model, X_train, X_test, y_train, y_test, feature_names, model_accuracy, model_f1 = train_model(df)
 
 # ============================================================================
@@ -421,7 +435,6 @@ page = st.sidebar.radio(
 
 st.sidebar.markdown("---")
 
-# Global Filters - Show ALL by default
 st.sidebar.subheader("Filters")
 
 selected_brands = st.sidebar.multiselect(
@@ -448,7 +461,6 @@ budget_range = st.sidebar.slider(
     (budget_min, budget_max)
 )
 
-# Apply filters
 filtered_df = df[
     (df['Current Brand'].isin(selected_brands)) &
     (df['Age'].between(age_range[0], age_range[1])) &
@@ -468,7 +480,6 @@ if page == "Overview":
     st.markdown("Complete analysis of smartphone buying behavior in Myanmar")
     st.markdown("---")
     
-    # Key Metrics
     col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
         st.metric("Total Customers", len(filtered_df))
@@ -485,7 +496,6 @@ if page == "Overview":
     
     st.markdown("---")
     
-    # Row 1: Brand Distribution + Priorities
     col1, col2 = st.columns(2)
     
     with col1:
@@ -512,7 +522,6 @@ if page == "Overview":
         fig.update_traces(texttemplate='%{x:.1f}%', textposition='outside')
         st.plotly_chart(fig, use_container_width=True)
     
-    # Row 2: Demographics
     col1, col2, col3 = st.columns(3)
     
     with col1:
@@ -542,7 +551,6 @@ if page == "Overview":
         fig.update_layout(height=350)
         st.plotly_chart(fig, use_container_width=True)
     
-    # Row 3: Switch Rate by Brand
     st.subheader("Brand Switching Rates (Min. 10 customers)")
     
     switch_by_brand = filtered_df.groupby('Current Brand').agg({
@@ -695,12 +703,11 @@ elif page == "Customer Segments":
         st.markdown(f"**Cluster {cluster_id}: {name}**")
         st.markdown(f"- Size: {size} customers ({size/len(df)*100:.1f}%)")
         st.markdown(f"- Avg Budget: {budget:.1f}L MMK")
-        st.markdown(f"- Avg AI Features: {ai_score:.2f}/5")
+        st.markdown(f("- Avg AI Features: {ai_score:.2f}/5")
         st.markdown(f"- Avg Ownership: {ownership:.1f} months")
         st.markdown(f"- Description: {desc}")
         st.markdown("---")
     
-    # New: Brand preference per cluster
     st.subheader("Brand Preference per Cluster")
     fig = px.imshow(
         cluster_brand_pct,
@@ -761,7 +768,7 @@ elif page == "Association Rules":
         st.warning("No association rules found. Try lowering min_support.")
 
 # ============================================================================
-# PAGE 5: PRIORITY BY SOURCE (FIXED - LARGER CHARTS)
+# PAGE 5: PRIORITY BY SOURCE
 # ============================================================================
 
 elif page == "Priority by Source":
@@ -769,17 +776,13 @@ elif page == "Priority by Source":
     st.markdown("See how different marketing channels attract different customer priorities")
     st.markdown("---")
     
-    # Get unique information sources
     info_sources = df['Information Source'].unique()
     info_sources = [s for s in info_sources if pd.notna(s)]
     
-    # Colors for consistency
     colors = ['#2E86AB', '#A23B72', '#F18F01', '#06D6A0', '#EF476F', '#118AB2', '#FFD166']
     
-    # Option 1: Heatmap - Priority vs Source
     st.subheader("Heatmap: Priority Preferences by Information Source")
     
-    # Create matrix: Source x Priority
     source_priority_matrix_local = {}
     all_priorities_local = set()
     
@@ -791,7 +794,6 @@ elif page == "Priority by Source":
         source_priority_matrix_local[source] = dict(priority_counts_local)
         all_priorities_local.update(priority_counts_local.keys())
     
-    # Convert to DataFrame
     priority_list_local = sorted(all_priorities_local)
     matrix_data_local = []
     for source in info_sources:
@@ -816,12 +818,9 @@ elif page == "Priority by Source":
     st.plotly_chart(fig, use_container_width=True)
     
     st.markdown("---")
-    
-    # Option 2: Individual Charts for Each Source (LARGER)
     st.subheader("Top Priorities by Information Source")
     
-    # Use columns to display 2 charts per row
-    for i, source in enumerate(info_sources):
+    for source in info_sources:
         source_df = df[df['Information Source'] == source]
         if len(source_df) == 0:
             continue
@@ -835,7 +834,6 @@ elif page == "Priority by Source":
             top_df = pd.DataFrame(top_priorities, columns=['Priority', 'Count'])
             top_df['%'] = top_df['Count'] / len(source_df) * 100
             
-            # Sort by percentage descending for better visualization
             top_df = top_df.sort_values('%', ascending=True)
             
             fig = px.bar(
@@ -859,8 +857,6 @@ elif page == "Priority by Source":
             st.plotly_chart(fig, use_container_width=True)
     
     st.markdown("---")
-    
-    # Option 3: Summary Insights
     st.subheader("Key Insights: Information Source vs Priority")
     
     col1, col2 = st.columns(2)
@@ -888,8 +884,6 @@ elif page == "Priority by Source":
         """)
     
     st.markdown("---")
-    
-    # Option 4: Detailed Analysis for Selected Source
     st.subheader("Detailed Analysis: Select an Information Source")
     
     selected_source = st.selectbox(
@@ -912,7 +906,6 @@ elif page == "Priority by Source":
         col1, col2 = st.columns(2)
         
         with col1:
-            # Priority breakdown
             priority_counts_local = Counter()
             for priorities in source_df['Priority_Merged']:
                 priority_counts_local.update(priorities)
@@ -940,7 +933,6 @@ elif page == "Priority by Source":
                 st.plotly_chart(fig, use_container_width=True)
         
         with col2:
-            # Brand distribution
             brand_counts = source_df['Current Brand'].value_counts().head(8)
             fig = px.pie(
                 values=brand_counts.values,
@@ -951,10 +943,8 @@ elif page == "Priority by Source":
             fig.update_layout(height=400)
             st.plotly_chart(fig, use_container_width=True)
         
-        # Insights
         st.subheader(f"Insights for {selected_source}")
         
-        # Compare to overall
         overall_switch = df['Switched'].mean() * 100
         source_switch = source_df['Switched'].mean() * 100
         
@@ -963,13 +953,13 @@ elif page == "Priority by Source":
         else:
             st.success(f"This channel has lower switch rate ({source_switch:.1f}% vs {overall_switch:.1f}% overall)")
         
-        # Top priority insight
         if priority_counts_local:
             top_priority = priority_counts_local.most_common(1)[0][0]
             top_pct = priority_counts_local.most_common(1)[0][1] / total * 100
             st.info(f"Top priority for this channel: **{top_priority}** ({top_pct:.1f}% of customers)")
+
 # ============================================================================
-# PAGE 6: PREDICT CHURN (WITHOUT LOYALTY SCORE)
+# PAGE 6: PREDICT CHURN
 # ============================================================================
 
 elif page == "Predict Churn":
@@ -1032,7 +1022,6 @@ elif page == "Predict Churn":
     selected_priorities = st.multiselect("What matters most?", priority_options, default=['Camera', 'Battery'])
     
     if st.button("Predict", type="primary"):
-        # Prepare input
         input_data = pd.DataFrame([{
             'Age': age,
             'Gender_Encoded': gender_encoded,
@@ -1046,14 +1035,12 @@ elif page == "Predict Churn":
             'Information_Source_Encoded': source_encoded
         }])
         
-        # Ensure columns match
         for col in feature_names:
             if col not in input_data.columns:
                 input_data[col] = 0
         
         input_data = input_data[feature_names]
         
-        # Predict
         prediction = model.predict(input_data)[0]
         probability = model.predict_proba(input_data)[0]
         
@@ -1072,7 +1059,6 @@ elif page == "Predict Churn":
                 st.success(f"Probability: {probability[0]*100:.1f}%")
                 st.info("This customer is likely to stay with their current brand")
         
-        # Behavioral indicators
         st.subheader("Behavioral Indicators")
         
         reasons = []
@@ -1099,7 +1085,6 @@ elif page == "Predict Churn":
             else:
                 st.success(f"- {reason}")
         
-        # Brand Recommendations
         st.subheader("Recommended Brands Based on Your Priorities")
         
         brand_scores = {}
@@ -1130,7 +1115,6 @@ elif page == "Predict Churn":
                     st.info(f"**Alternative: {brand}**")
                     st.metric("Match Score", f"{percentage:.1f}%")
         
-        # Confidence Meter
         st.subheader("Switch Confidence Meter")
         
         fig = go.Figure(go.Indicator(
@@ -1156,7 +1140,6 @@ elif page == "Predict Churn":
         fig.update_layout(height=300)
         st.plotly_chart(fig, use_container_width=True)
         
-        # Feature Importance
         st.subheader("Key Factors Driving This Prediction")
         
         if hasattr(model, 'feature_importances_'):
@@ -1175,7 +1158,6 @@ elif page == "Predict Churn":
             fig.update_layout(showlegend=False, height=300)
             st.plotly_chart(fig, use_container_width=True)
         
-        # Reliability note
         brand_count = len(df[df['Current Brand'] == current_brand])
         if brand_count < 30:
             st.warning(f"Limited data for {current_brand} ({brand_count} customers). Consider this prediction as a general indication.")
