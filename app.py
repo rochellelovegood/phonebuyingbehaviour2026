@@ -489,8 +489,12 @@ if page == "Overview":
     with col3:
         st.metric("Avg Budget", f"{filtered_df['Budget_Lakhs'].mean():.1f}L MMK")
     with col4:
-        st.metric("Avg Loyalty", f"{filtered_df['Loyalty (1-5)'].mean():.2f}/5")
-        st.caption("(Observed in data - not used for prediction)")
+        if 'Loyalty (1-5)' in filtered_df.columns:
+            st.metric("Avg Loyalty", f"{filtered_df['Loyalty (1-5)'].mean():.2f}/5")
+            st.caption("(Observed in data - not used for prediction)")
+        else:
+            st.metric("Avg Loyalty", "N/A")
+            st.caption("Loyalty data not available")
     with col5:
         st.metric("Avg AI Score", f"{filtered_df['AI Features (1-5)'].mean():.2f}/5")
     
@@ -551,7 +555,7 @@ if page == "Overview":
         fig.update_layout(height=350)
         st.plotly_chart(fig, use_container_width=True)
     
-    st.subheader("Brand Switching Rates (Min. 10 customers)")
+    st.subheader("Brand Switching Rates ")
     
     switch_by_brand = filtered_df.groupby('Current Brand').agg({
         'Switched': ['count', 'mean']
@@ -720,52 +724,205 @@ elif page == "Customer Segments":
     st.plotly_chart(fig, use_container_width=True)
 
 # ============================================================================
-# PAGE 4: ASSOCIATION RULES
+# PAGE 4: ASSOCIATION RULES - FIXED TO SHOW ONLY HIGH CONFIDENCE
 # ============================================================================
 
 elif page == "Association Rules":
     st.title("Association Rules - Priority Combinations")
     st.markdown("---")
     
-    if len(rules) > 0:
-        st.subheader("Top Association Rules (by Lift)")
-        
-        rules_display = rules[['antecedents', 'consequents', 'support', 'confidence', 'lift']].head(10).copy()
-        
-        rules_display['antecedents'] = rules_display['antecedents'].apply(
-            lambda x: ', '.join([f.replace('Priority_', '') for f in list(x)])
+    # Add confidence threshold filter
+    col1, col2 = st.columns(2)
+    with col1:
+        min_confidence = st.slider(
+            "Minimum Confidence Threshold",
+            min_value=0.1,
+            max_value=0.9,
+            value=0.3,
+            step=0.05,
+            help="Higher confidence = stronger association. Only rules above this threshold will be shown."
         )
-        rules_display['consequents'] = rules_display['consequents'].apply(
-            lambda x: ', '.join([f.replace('Priority_', '') for f in list(x)])
+    with col2:
+        min_lift = st.slider(
+            "Minimum Lift",
+            min_value=1.0,
+            max_value=3.0,
+            value=1.2,
+            step=0.1,
+            help="Lift > 1 means positive association. Higher lift = stronger relationship."
         )
+    
+    # Filter rules by confidence and lift
+    filtered_rules = rules[
+        (rules['confidence'] >= min_confidence) & 
+        (rules['lift'] >= min_lift)
+    ].copy()
+    
+    if len(filtered_rules) > 0:
+        st.success(f"✅ Found {len(filtered_rules)} strong association rules with confidence ≥ {min_confidence:.0%} and lift ≥ {min_lift:.1f}")
         
-        rules_display['support'] = rules_display['support'].apply(lambda x: f"{x:.2%}")
-        rules_display['confidence'] = rules_display['confidence'].apply(lambda x: f"{x:.2%}")
-        rules_display['lift'] = rules_display['lift'].apply(lambda x: f"{x:.2f}x")
+        # Show metrics summary
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.metric("Total Strong Rules", len(filtered_rules))
+        with col2:
+            st.metric("Avg Confidence", f"{filtered_rules['confidence'].mean():.1%}")
+        with col3:
+            st.metric("Max Confidence", f"{filtered_rules['confidence'].max():.1%}")
+        with col4:
+            st.metric("Avg Lift", f"{filtered_rules['lift'].mean():.2f}x")
         
-        st.dataframe(rules_display, use_container_width=True)
+        st.markdown("---")
         
-        st.subheader("Product Recommendations")
+        # Sort by confidence (highest first)
+        filtered_rules = filtered_rules.sort_values('confidence', ascending=False)
         
-        for idx, row in rules.head(3).iterrows():
-            ante = ', '.join([f.replace('Priority_', '') for f in list(row['antecedents'])])
-            cons = ', '.join([f.replace('Priority_', '') for f in list(row['consequents'])])
+        # Tab 1: High Confidence Rules
+        tab1, tab2, tab3 = st.tabs([
+            "⭐ High Confidence Rules",
+            "📊 Confidence Matrix", 
+            "🎯 Actionable Insights"
+        ])
+        
+        with tab1:
+            st.subheader(f"Top Rules with Confidence ≥ {min_confidence:.0%}")
             
-            st.markdown(f"**Bundle: {ante} -> {cons}**")
-            st.markdown(f"- Confidence: {row['confidence']:.1%}")
-            st.markdown(f"- Lift: {row['lift']:.2f}x")
+            rules_display = filtered_rules[['antecedents', 'consequents', 'support', 'confidence', 'lift']].head(20).copy()
+            rules_display['antecedents'] = rules_display['antecedents'].apply(
+                lambda x: ', '.join([f.replace('Priority_', '') for f in list(x)])
+            )
+            rules_display['consequents'] = rules_display['consequents'].apply(
+                lambda x: ', '.join([f.replace('Priority_', '') for f in list(x)])
+            )
             
-            if 'Camera' in ante and 'Affordability' in ante:
-                st.info("Action: Create budget phones with good camera and long battery life")
-            elif 'Brand' in ante and 'Camera' in cons:
-                st.info("Action: Position brand as premium camera phone")
-            elif 'Affordability' in ante and 'Battery' in cons:
-                st.info("Action: Promote budget phones with extended battery life")
+            # Color code confidence levels
+            def color_confidence(val):
+                if val >= 0.7:
+                    return 'background-color: #d4edda'  # green - very strong
+                elif val >= 0.5:
+                    return 'background-color: #fff3cd'  # yellow - strong
+                elif val >= 0.3:
+                    return 'background-color: #cce5ff'  # blue - moderate
+                else:
+                    return 'background-color: #f8d7da'  # red - weak
+            
+            styled = rules_display.style.applymap(
+                color_confidence, 
+                subset=['confidence']
+            )
+            st.dataframe(styled, use_container_width=True)
+            
+            # Show the strongest rule
+            if len(filtered_rules) > 0:
+                best_rule = filtered_rules.iloc[0]
+                ante = ', '.join([f.replace('Priority_', '') for f in list(best_rule['antecedents'])])
+                cons = ', '.join([f.replace('Priority_', '') for f in list(best_rule['consequents'])])
+                
+                st.info(f"🏆 **Strongest Association:** Customers interested in **{ante}** are **{best_rule['confidence']:.1%}** likely to also want **{cons}**")
+                st.caption(f"Support: {best_rule['support']:.1%} of customers show this pattern | Lift: {best_rule['lift']:.2f}x")
+        
+        with tab2:
+            st.subheader("Confidence Matrix (Top Priorities)")
+            
+            # Create a matrix of confidence values
+            top_priorities = set()
+            for itemset in filtered_rules['antecedents']:
+                top_priorities.update([p.replace('Priority_', '') for p in list(itemset)])
+            for itemset in filtered_rules['consequents']:
+                top_priorities.update([p.replace('Priority_', '') for p in list(itemset)])
+            top_priorities = sorted(top_priorities)[:10]  # Limit to top 10
+            
+            conf_matrix = pd.DataFrame(0.0, index=top_priorities, columns=top_priorities)
+            
+            for _, row in filtered_rules.iterrows():
+                ante = [p.replace('Priority_', '') for p in list(row['antecedents'])]
+                cons = [p.replace('Priority_', '') for p in list(row['consequents'])]
+                conf = row['confidence']
+                
+                for a in ante:
+                    for c in cons:
+                        if a in conf_matrix.index and c in conf_matrix.columns:
+                            conf_matrix.loc[a, c] = max(conf_matrix.loc[a, c], conf)
+            
+            fig = px.imshow(
+                conf_matrix,
+                text_auto='.2f',
+                aspect="auto",
+                color_continuous_scale='RdYlGn',
+                title=f"Confidence Matrix (Minimum Confidence: {min_confidence:.0%})"
+            )
+            fig.update_layout(height=500)
+            st.plotly_chart(fig, use_container_width=True)
+            
+            st.caption("💡 Green = Strong association (high confidence) | Red = Weak association (low confidence)")
+        
+        with tab3:
+            st.subheader("Actionable Business Insights")
+            
+            # Filter for rules with both high confidence and high lift (most actionable)
+            actionable_rules = filtered_rules[
+                (filtered_rules['confidence'] >= 0.5) & 
+                (filtered_rules['lift'] >= 1.5)
+            ].head(10)
+            
+            if len(actionable_rules) > 0:
+                for idx, (_, row) in enumerate(actionable_rules.iterrows()):
+                    ante = ', '.join([f.replace('Priority_', '') for f in list(row['antecedents'])])
+                    cons = ', '.join([f.replace('Priority_', '') for f in list(row['consequents'])])
+                    
+                    with st.expander(f"🎯 Insight {idx+1}: {ante} → {cons}"):
+                        col1, col2, col3 = st.columns(3)
+                        with col1:
+                            st.metric("Confidence", f"{row['confidence']:.1%}")
+                        with col2:
+                            st.metric("Lift", f"{row['lift']:.2f}x")
+                        with col3:
+                            st.metric("Support", f"{row['support']:.1%}")
+                        
+                        # Business recommendation
+                        if 'Camera' in ante and 'Battery' in cons:
+                            st.info("💡 **Action:** Develop budget phones with both good camera and long battery life")
+                        elif 'Brand' in ante and 'Camera' in cons:
+                            st.info("💡 **Action:** Position your brand as a premium camera phone option")
+                        elif 'Affordability' in ante and 'Battery' in cons:
+                            st.info("💡 **Action:** Market budget phones with extended battery life as key selling point")
+                        elif 'Gaming' in ante and 'SOC' in cons:
+                            st.info("💡 **Action:** Promote gaming performance alongside powerful processor specs")
+                        else:
+                            st.info(f"💡 **Action:** Bundle {ante} with {cons} in marketing campaigns")
+                        
+                        # Recommendation strength
+                        if row['confidence'] >= 0.7:
+                            st.success("✅ **Very Strong Recommendation** - High confidence suggests this is a reliable pattern")
+                        elif row['confidence'] >= 0.5:
+                            st.warning("⚠️ **Moderate Recommendation** - Good confidence but consider validating with additional data")
+                        else:
+                            st.info("ℹ️ **Initial Recommendation** - Promising pattern worth exploring further")
+                        
+                        st.markdown("---")
             else:
-                st.info(f"Action: Bundle {ante} with {cons} for better customer satisfaction")
-            st.markdown("---")
+                st.warning("No actionable insights found with confidence ≥ 50% and lift ≥ 1.5. Try lowering the thresholds.")
+        
+        # Show all rules in expandable section
+        with st.expander("📊 View All Rules"):
+            st.subheader("All Filtered Rules")
+            all_rules_display = filtered_rules[['antecedents', 'consequents', 'support', 'confidence', 'lift']].copy()
+            all_rules_display['antecedents'] = all_rules_display['antecedents'].apply(
+                lambda x: ', '.join([f.replace('Priority_', '') for f in list(x)])
+            )
+            all_rules_display['consequents'] = all_rules_display['consequents'].apply(
+                lambda x: ', '.join([f.replace('Priority_', '') for f in list(x)])
+            )
+            st.dataframe(all_rules_display, use_container_width=True)
+            
     else:
-        st.warning("No association rules found. Try lowering min_support.")
+        st.warning(f"No association rules found with confidence ≥ {min_confidence:.0%} and lift ≥ {min_lift:.1f}")
+        st.info("💡 Try lowering the minimum confidence threshold or lift to see more rules.")
+        
+        # Show total rules without filters
+        if len(rules) > 0:
+            st.subheader(f"Total rules available: {len(rules)}")
+            st.caption("These rules don't meet your minimum confidence/lift thresholds. Adjust the sliders above to see them.")
 
 # ============================================================================
 # PAGE 5: PRIORITY BY SOURCE
