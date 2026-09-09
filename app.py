@@ -703,7 +703,7 @@ elif page == "Customer Segments":
         st.markdown(f"**Cluster {cluster_id}: {name}**")
         st.markdown(f"- Size: {size} customers ({size/len(df)*100:.1f}%)")
         st.markdown(f"- Avg Budget: {budget:.1f}L MMK")
-        st.markdown(f("- Avg AI Features: {ai_score:.2f}/5")
+        st.markdown(f"- Avg AI Features: {ai_score:.2f}/5")
         st.markdown(f"- Avg Ownership: {ownership:.1f} months")
         st.markdown(f"- Description: {desc}")
         st.markdown("---")
