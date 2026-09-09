@@ -761,7 +761,7 @@ elif page == "Association Rules":
         st.warning("No association rules found. Try lowering min_support.")
 
 # ============================================================================
-# PAGE 5: PRIORITY BY SOURCE (NEW)
+# PAGE 5: PRIORITY BY SOURCE (FIXED - LARGER CHARTS)
 # ============================================================================
 
 elif page == "Priority by Source":
@@ -769,10 +769,43 @@ elif page == "Priority by Source":
     st.markdown("See how different marketing channels attract different customer priorities")
     st.markdown("---")
     
-    # Heatmap
+    # Get unique information sources
+    info_sources = df['Information Source'].unique()
+    info_sources = [s for s in info_sources if pd.notna(s)]
+    
+    # Colors for consistency
+    colors = ['#2E86AB', '#A23B72', '#F18F01', '#06D6A0', '#EF476F', '#118AB2', '#FFD166']
+    
+    # Option 1: Heatmap - Priority vs Source
     st.subheader("Heatmap: Priority Preferences by Information Source")
+    
+    # Create matrix: Source x Priority
+    source_priority_matrix_local = {}
+    all_priorities_local = set()
+    
+    for source in info_sources:
+        source_df = df[df['Information Source'] == source]
+        priority_counts_local = Counter()
+        for priorities in source_df['Priority_Merged']:
+            priority_counts_local.update(priorities)
+        source_priority_matrix_local[source] = dict(priority_counts_local)
+        all_priorities_local.update(priority_counts_local.keys())
+    
+    # Convert to DataFrame
+    priority_list_local = sorted(all_priorities_local)
+    matrix_data_local = []
+    for source in info_sources:
+        row = []
+        for p in priority_list_local:
+            count = source_priority_matrix_local[source].get(p, 0)
+            total = len(df[df['Information Source'] == source])
+            row.append(count / total * 100 if total > 0 else 0)
+        matrix_data_local.append(row)
+    
+    heatmap_df_local = pd.DataFrame(matrix_data_local, index=info_sources, columns=priority_list_local)
+    
     fig = px.imshow(
-        source_priority_matrix,
+        heatmap_df_local,
         text_auto='.1f',
         aspect="auto",
         color_continuous_scale='Blues',
@@ -782,22 +815,29 @@ elif page == "Priority by Source":
     fig.update_layout(height=500)
     st.plotly_chart(fig, use_container_width=True)
     
-    # Detailed bar charts for each source
-    st.subheader("Top 3 Priorities per Information Source")
+    st.markdown("---")
     
-    sources = source_priority_matrix.index.tolist()
-    for source in sources:
+    # Option 2: Individual Charts for Each Source (LARGER)
+    st.subheader("Top Priorities by Information Source")
+    
+    # Use columns to display 2 charts per row
+    for i, source in enumerate(info_sources):
         source_df = df[df['Information Source'] == source]
         if len(source_df) == 0:
             continue
-        priorities = []
-        for p in source_df['Priority_Merged']:
-            priorities.extend(p)
-        p_counts = Counter(priorities)
-        top3 = p_counts.most_common(3)
-        if top3:
-            top_df = pd.DataFrame(top3, columns=['Priority', 'Count'])
+            
+        priority_counts_local = Counter()
+        for priorities in source_df['Priority_Merged']:
+            priority_counts_local.update(priorities)
+        
+        if priority_counts_local:
+            top_priorities = priority_counts_local.most_common(6)
+            top_df = pd.DataFrame(top_priorities, columns=['Priority', 'Count'])
             top_df['%'] = top_df['Count'] / len(source_df) * 100
+            
+            # Sort by percentage descending for better visualization
+            top_df = top_df.sort_values('%', ascending=True)
+            
             fig = px.bar(
                 top_df,
                 x='%',
@@ -805,20 +845,129 @@ elif page == "Priority by Source":
                 orientation='h',
                 title=f"{source} ({len(source_df)} customers)",
                 color='Priority',
-                color_discrete_sequence=px.colors.qualitative.Set3
+                color_discrete_sequence=colors,
+                text='%'
             )
-            fig.update_layout(showlegend=False, height=200)
+            fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
+            fig.update_layout(
+                showlegend=False, 
+                height=350,
+                xaxis_title="Percentage of Customers (%)",
+                yaxis_title="Priority",
+                font=dict(size=14)
+            )
             st.plotly_chart(fig, use_container_width=True)
     
-    # Insight summary
-    st.subheader("Key Insights")
-    st.markdown("""
-    - **Online Reviews** customers care most about Battery (69.1%).
-    - **In-store demos** customers care most about Brand (33.8%).
-    - **Social Media Ads** customers care most about Affordability (31.8%).
-    - **Friend/Family** referrals are balanced, with Camera and Battery top.
-    """)
-
+    st.markdown("---")
+    
+    # Option 3: Summary Insights
+    st.subheader("Key Insights: Information Source vs Priority")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        **What Each Channel Attracts**
+        
+        - **Friend/Family**: Camera, Battery - word of mouth drives quality focus
+        - **Social Media Ads**: Camera, Affordability - aspirational but price-conscious
+        - **In-Store Demos**: Camera, Brand - hands-on experience drives quality
+        - **Online Reviews**: Camera, Battery - research-driven buyers care about specs
+        - **YouTube/Influencer**: Camera, Gaming - tech enthusiasts
+        """)
+    
+    with col2:
+        st.markdown("""
+        **Marketing Recommendations**
+        
+        - **Online Reviews** → Highlight Battery specs
+        - **In-Store** → Showcase Brand and Camera
+        - **Social Media** → Emphasize Affordability + Camera
+        - **Friend/Family** → Encourage referrals with quality focus
+        - **YouTube** → Show Gaming and Camera performance
+        """)
+    
+    st.markdown("---")
+    
+    # Option 4: Detailed Analysis for Selected Source
+    st.subheader("Detailed Analysis: Select an Information Source")
+    
+    selected_source = st.selectbox(
+        "Select Information Source",
+        options=sorted(info_sources)
+    )
+    
+    if selected_source:
+        source_df = df[df['Information Source'] == selected_source]
+        total = len(source_df)
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Customers", total)
+        with col2:
+            st.metric("Switch Rate", f"{source_df['Switched'].mean()*100:.1f}%")
+        with col3:
+            st.metric("Avg Budget", f"{source_df['Budget_Lakhs'].mean():.1f}L MMK")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            # Priority breakdown
+            priority_counts_local = Counter()
+            for priorities in source_df['Priority_Merged']:
+                priority_counts_local.update(priorities)
+            
+            if priority_counts_local:
+                priority_df_local = pd.DataFrame(
+                    priority_counts_local.most_common(),
+                    columns=['Priority', 'Count']
+                )
+                priority_df_local['%'] = priority_df_local['Count'] / total * 100
+                priority_df_local = priority_df_local.sort_values('%', ascending=True)
+                
+                fig = px.bar(
+                    priority_df_local,
+                    x='%',
+                    y='Priority',
+                    orientation='h',
+                    title="Priority Preferences",
+                    color='Priority',
+                    color_discrete_sequence=colors,
+                    text='%'
+                )
+                fig.update_traces(texttemplate='%{text:.1f}%', textposition='outside')
+                fig.update_layout(showlegend=False, height=400, font=dict(size=14))
+                st.plotly_chart(fig, use_container_width=True)
+        
+        with col2:
+            # Brand distribution
+            brand_counts = source_df['Current Brand'].value_counts().head(8)
+            fig = px.pie(
+                values=brand_counts.values,
+                names=brand_counts.index,
+                title="Brand Distribution",
+                color_discrete_sequence=colors
+            )
+            fig.update_layout(height=400)
+            st.plotly_chart(fig, use_container_width=True)
+        
+        # Insights
+        st.subheader(f"Insights for {selected_source}")
+        
+        # Compare to overall
+        overall_switch = df['Switched'].mean() * 100
+        source_switch = source_df['Switched'].mean() * 100
+        
+        if source_switch > overall_switch:
+            st.warning(f"This channel has higher switch rate ({source_switch:.1f}% vs {overall_switch:.1f}% overall)")
+        else:
+            st.success(f"This channel has lower switch rate ({source_switch:.1f}% vs {overall_switch:.1f}% overall)")
+        
+        # Top priority insight
+        if priority_counts_local:
+            top_priority = priority_counts_local.most_common(1)[0][0]
+            top_pct = priority_counts_local.most_common(1)[0][1] / total * 100
+            st.info(f"Top priority for this channel: **{top_priority}** ({top_pct:.1f}% of customers)")
 # ============================================================================
 # PAGE 6: PREDICT CHURN (WITHOUT LOYALTY SCORE)
 # ============================================================================
